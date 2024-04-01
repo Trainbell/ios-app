@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63443C7A2BBAB441003B2EDF /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63443C792BBAB441003B2EDF /* SearchBar.swift */; };
+		63443C7E2BBAC2D7003B2EDF /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63443C7D2BBAC2D7003B2EDF /* Test.swift */; };
 		63C1FEF72BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FEF62BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift */; };
 		63C1FEF92BB9470B007F6FCA /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FEF82BB9470B007F6FCA /* SplashScreenView.swift */; };
 		63C1FEFD2BB9470C007F6FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C1FEFC2BB9470C007F6FCA /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63443C792BBAB441003B2EDF /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		63443C7D2BBAC2D7003B2EDF /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		63C1FEF32BB9470B007F6FCA /* Trabell_Mini Project 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trabell_Mini Project 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C1FEF62BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trabell_Mini_Project_1App.swift; sourceTree = "<group>"; };
 		63C1FEF82BB9470B007F6FCA /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 			children = (
 				63C1FEF62BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift */,
 				63C1FEF82BB9470B007F6FCA /* SplashScreenView.swift */,
+				63443C792BBAB441003B2EDF /* SearchBar.swift */,
+				63443C7D2BBAC2D7003B2EDF /* Test.swift */,
 				63C1FEFC2BB9470C007F6FCA /* Assets.xcassets */,
 				63C1FEFE2BB9470C007F6FCA /* Preview Content */,
 			);
@@ -262,7 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C1FEF92BB9470B007F6FCA /* SplashScreenView.swift in Sources */,
+				63443C7E2BBAC2D7003B2EDF /* Test.swift in Sources */,
 				63C1FEF72BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift in Sources */,
+				63443C7A2BBAB441003B2EDF /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
