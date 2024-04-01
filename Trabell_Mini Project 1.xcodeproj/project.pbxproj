@@ -14,6 +14,7 @@
 		63C1FF0A2BB9470C007F6FCA /* Trabell_Mini_Project_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FF092BB9470C007F6FCA /* Trabell_Mini_Project_1Tests.swift */; };
 		63C1FF142BB9470C007F6FCA /* Trabell_Mini_Project_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FF132BB9470C007F6FCA /* Trabell_Mini_Project_1UITests.swift */; };
 		63C1FF162BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FF152BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift */; };
+		FB4CC8632BBA6B28003D2D4C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FB4CC8622BBA6B28003D2D4C /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		63C1FF0F2BB9470C007F6FCA /* Trabell_Mini Project 1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trabell_Mini Project 1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C1FF132BB9470C007F6FCA /* Trabell_Mini_Project_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trabell_Mini_Project_1UITests.swift; sourceTree = "<group>"; };
 		63C1FF152BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trabell_Mini_Project_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB4CC8622BBA6B28003D2D4C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		63C1FEEA2BB9470B007F6FCA = {
 			isa = PBXGroup;
 			children = (
+				FB4CC8622BBA6B28003D2D4C /* .gitignore */,
 				63C1FEF52BB9470B007F6FCA /* Trabell_Mini Project 1 */,
 				63C1FF082BB9470C007F6FCA /* Trabell_Mini Project 1Tests */,
 				63C1FF122BB9470C007F6FCA /* Trabell_Mini Project 1UITests */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C1FF002BB9470C007F6FCA /* Preview Assets.xcassets in Resources */,
+				FB4CC8632BBA6B28003D2D4C /* .gitignore in Resources */,
 				63C1FEFD2BB9470C007F6FCA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
