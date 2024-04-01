@@ -38,7 +38,7 @@ struct SplashScreenView: View {
                     .padding(.bottom, 55)
                 Spacer()
                 
-                Text("Ringing in the right stops, gently and surely!")
+                Text("Ringing in the right stops, gently and !")
                     .font(.footnote)
                     .foregroundColor(Color(hex: "#57575C"))
                     .frame(maxWidth: .infinity, alignment: .center)
