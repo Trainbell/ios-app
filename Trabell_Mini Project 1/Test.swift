@@ -23,8 +23,8 @@ struct Test: View {
         
             //tambahin ke home
             .sheet(isPresented: $showSearchBar) {
-                        SearchBar(showSearchBar: $showSearchBar)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                SearchBar()
+
         
         }
             

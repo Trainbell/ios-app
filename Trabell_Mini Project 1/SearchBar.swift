@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchBar: View {
-    @Binding var showSearchBar: Bool
+    
     @Environment(\.dismiss) private var dismiss
     @State private var searchTerm = ""
     @FocusState private var isSearchFocused: Bool
@@ -16,16 +16,19 @@ struct SearchBar: View {
 
     var body: some View {
 
-        VStack {
+        VStack (alignment: .leading) {
             HStack {
                         HStack {
                             Image(systemName: "magnifyingglass")
                                 .foregroundColor(Color(hex: "8E8E83"))
-                            TextField("Search", text: $searchTerm)
+                                .padding(.trailing, -10)
+                            TextField("Search for your destination station", text: $searchTerm)
                                 .font(.subheadline)
+                                .font(.body)
                                 .focused($isSearchFocused)
                                 .padding(.horizontal, 12)
                                 .padding(.vertical, 12)
+                                .fontWeight(.medium)
                                 .foregroundColor(Color(hex: "8E8E83"))
                             if isSearchFocused {
                                 Button(action: {
@@ -49,10 +52,31 @@ struct SearchBar: View {
             
             Text("Popular Station")
                 .font(.headline)
-                .fontWeight(.semibold)
+                .fontWeight(.bold)
+                .font(.system(size: 16))
                 .frame(maxWidth: .infinity, alignment: .topLeading)
-                .padding(20)
+                .padding(.leading, 20)
+                .padding(.top, 21)
+               
+            
+            HStack {
+                Button("Tanah Abang"){
+                    //action
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(Color(hex: "6F9D80"))
+                .buttonBorderShape(.roundedRectangle(radius: 16))
+                .frame(height: 28)
+                .fontWeight(.medium)
+                .font(.caption)
+                
+            }
+            .padding(.top, 3)
+            .padding(.leading, 20)
+            
+            
             Spacer()
+            
             
 
         }
@@ -67,6 +91,11 @@ struct SearchBar: View {
         
     
 }
+
+#Preview {
+    SearchBar()
+}
+
 
 
 
