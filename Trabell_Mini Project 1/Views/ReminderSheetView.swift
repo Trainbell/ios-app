@@ -9,9 +9,11 @@ import SwiftUI
 import StepperView
 
 struct ReminderSheetView: View {
-    
+    @Binding var destinationStation: StationModel?
+    @ObservedObject var locationUtil = LocationUtils()
     @Binding var isPresented: Bool
-    @State var currentStation = StationUtils().getNearestStation(latitude: -6.314835075294274, longitude: 106.67623201918188)
+    @State var listStation: [StationModel] = []
+    @State var currentStation = StationUtils.getNearestStation(latitude: -6.314835075294274, longitude: 106.67623201918188)
     
     var body: some View {
         VStack {
@@ -39,22 +41,24 @@ struct ReminderSheetView: View {
             
             Divider()
             
-            ScrollView(.vertical, showsIndicators: false) {
-                StepperView()
-                    .addSteps(
-                        getListStep(listStation: stationModels)
-                    )
-                    .alignments((stationModels).map { _ in .bottom })
-                    .indicators(
-                        getListIndicator(listStation: stationModels)
-                    )
-                    .lineOptions(StepperLineOptions.rounded(4, 8, Color(hex:"0xF6F9D80")))
-                    .stepLifeCycles((stationModels).map { _ in StepLifeCycle.completed })
-                    .spacing(40)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 50)
+            if (!self.listStation.isEmpty){
+                ScrollView(.vertical, showsIndicators: false) {
+                    StepperView()
+                        .addSteps(
+                            getListStep(listStation: listStation)
+                        )
+                        .alignments((stationModels).map { _ in .bottom })
+                        .indicators(
+                            getListIndicator(listStation: listStation)
+                        )
+                        .lineOptions(StepperLineOptions.rounded(4, 8, Color(hex:"0xF6F9D80")))
+                        .stepLifeCycles((listStation).map { _ in StepLifeCycle.completed })
+                        .spacing(40)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 50)
+                }
+                
             }
-            
             Button(
                 action: {
                     
@@ -71,6 +75,19 @@ struct ReminderSheetView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(Color(hex: "0xF8EBDD"))
+        .onAppear {
+            self.locationUtil.requestLocation()
+        }
+        .onChange(of: locationUtil.userLocation){ _, location in
+            print("change")
+            guard let location = location else {
+                return
+            }
+            self.currentStation = StationUtils.getNearestStation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            if(self.currentStation != nil && self.listStation.isEmpty){
+                self.listStation = StationUtils.getRouteStation(from: self.currentStation!, to: self.destinationStation!)
+            }
+        }
     }
     
     func getListIndicator(listStation: [StationModel] ) -> [StepperIndicationType<IndicatorImageView>] {

@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
-import SwiftData
+import Combine
 
 
 struct SplashScreenView: View {
     @State private var isActive: Bool = false
+    @ObservedObject var locationUtils = LocationUtils()
     
     var body: some View {
         VStack {
@@ -43,18 +44,26 @@ struct SplashScreenView: View {
             .isDetailLink(false)
             
         )
+        .onChange(of: locationUtils.statusLocation){ _, newvalue in
+            self.isActive = true
+            print("get called")
+        }
         .onAppear {
             Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { _ in
-                self.isActive = true
+                if(locationUtils.getLocationAuthorization() == .authorizedAlways){
+                    isActive = true
+                }else {
+                    locationUtils.requestAuthorizationIfNeeded()
+                }
             }
+            
         }
-        
     }
     
     
 }
 
-#Preview {
-    SplashScreenView()
-    
-}
+//#Preview {
+//    SplashScreenView()
+//
+//}

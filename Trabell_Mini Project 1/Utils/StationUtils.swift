@@ -8,7 +8,26 @@
 import CoreLocation
 
 class StationUtils {
-    func getNearestStation(latitude: Double, longitude: Double) -> StationModel? {
+   static func getRouteStation(from current: StationModel, to destination: StationModel) -> [StationModel] {
+        
+        guard let currentIndex = stationModels.firstIndex(of: current),
+              let destinationIndex = stationModels.firstIndex(of: destination) else {
+            return []
+        }
+        
+        let startIndex = min(currentIndex, destinationIndex)
+        let endIndex = max(currentIndex, destinationIndex)
+        
+        let result = stationModels[startIndex...endIndex]
+        
+        if currentIndex > destinationIndex {
+            return Array(result)
+        } else {
+            return Array(result.reversed())
+        }
+    }
+    
+    static func getNearestStation(latitude: Double, longitude: Double) -> StationModel? {
         let currentLocation = CLLocation(latitude: latitude, longitude: longitude)
         var nearestLocation: StationModel?
         var shortestDistance: CLLocationDistance = Double.greatestFiniteMagnitude

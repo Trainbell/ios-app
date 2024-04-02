@@ -15,13 +15,13 @@ struct SearchSheetView: View {
     @FocusState private var isSearchFocused: Bool
     @State var showSheet = false
     @State var searchResults: [StationModel] = []
+    @State var selectedStation: StationModel? = nil
     
     var body: some View {
         
         ScrollView {
             VStack  {
                 HStack {
-                    
                     HStack {
                         Image(systemName: "magnifyingglass")
                             .foregroundColor(Color(hex: "8E8E83"))
@@ -60,10 +60,7 @@ struct SearchSheetView: View {
                     .background(Color(hex: "F5F5F0"))
                     .cornerRadius(12)
                     .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.gray, lineWidth: 1))
-                    
                 }
-                
-                
                 .frame(alignment: .top)
                 .padding(.top, 54)
                 .padding(.horizontal)
@@ -122,7 +119,9 @@ struct SearchSheetView: View {
                         ForEach(searchResults, id: \.id) { item in
                             VStack{
                                 Button(action: {
+                                    selectedStation = item
                                     showSheet.toggle()
+                                    
                                 }){
                                     SearchItemComponent(station: item)
                                 }
@@ -141,7 +140,8 @@ struct SearchSheetView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(Color(hex: "F8EBDD"))
         .sheet(isPresented: $showSheet){
-            ReminderSheetView(isPresented: $showSheet)
+            ReminderSheetView(destinationStation: $selectedStation, isPresented: $showSheet)
+
         }
         
     }

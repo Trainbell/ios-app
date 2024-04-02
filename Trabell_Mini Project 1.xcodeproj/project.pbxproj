@@ -71,6 +71,7 @@
 		FBE54B3E2BBC38AD000724B0 /* StationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationUtils.swift; sourceTree = "<group>"; };
 		FBE54B402BBC77FA000724B0 /* SearchItemComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemComponent.swift; sourceTree = "<group>"; };
 		FBE54B422BBC7891000724B0 /* ButtonPopulerStationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPopulerStationComponent.swift; sourceTree = "<group>"; };
+		FBE54B442BBC87F2000724B0 /* Trabell-Mini-Project-1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Trabell-Mini-Project-1-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +124,7 @@
 		63C1FEF52BB9470B007F6FCA /* Trabell_Mini Project 1 */ = {
 			isa = PBXGroup;
 			children = (
+				FBE54B442BBC87F2000724B0 /* Trabell-Mini-Project-1-Info.plist */,
 				FBE54B2D2BBBBE55000724B0 /* Models */,
 				FBE54B252BBBBD27000724B0 /* Utils */,
 				FBE54B242BBBBCF4000724B0 /* Views */,
@@ -516,6 +518,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Trabell_Mini Project 1/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Trabell-Mini-Project-1-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to provide you with relevant information.";
+				INFOPLIST_KEY_NSLocationUsageDescription = Location;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Location;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -544,6 +550,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Trabell_Mini Project 1/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Trabell-Mini-Project-1-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to provide you with relevant information.";
+				INFOPLIST_KEY_NSLocationUsageDescription = Location;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Location;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
