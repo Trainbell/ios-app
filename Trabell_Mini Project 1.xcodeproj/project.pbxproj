@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63443C7A2BBAB441003B2EDF /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63443C792BBAB441003B2EDF /* SearchBar.swift */; };
-		63443C7E2BBAC2D7003B2EDF /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63443C7D2BBAC2D7003B2EDF /* Test.swift */; };
+		63443C7A2BBAB441003B2EDF /* SearchSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63443C792BBAB441003B2EDF /* SearchSheetView.swift */; };
 		63C1FEF72BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FEF62BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift */; };
 		63C1FEF92BB9470B007F6FCA /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FEF82BB9470B007F6FCA /* SplashView.swift */; };
 		63C1FEFD2BB9470C007F6FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C1FEFC2BB9470C007F6FCA /* Assets.xcassets */; };
@@ -27,6 +26,8 @@
 		FBE54B3B2BBBD06A000724B0 /* DataStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B3A2BBBD06A000724B0 /* DataStation.swift */; };
 		FBE54B3D2BBBD650000724B0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B3C2BBBD650000724B0 /* MainView.swift */; };
 		FBE54B3F2BBC38AD000724B0 /* StationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B3E2BBC38AD000724B0 /* StationUtils.swift */; };
+		FBE54B412BBC77FA000724B0 /* SearchItemComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B402BBC77FA000724B0 /* SearchItemComponent.swift */; };
+		FBE54B432BBC7891000724B0 /* ButtonPopulerStationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B422BBC7891000724B0 /* ButtonPopulerStationComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		63443C792BBAB441003B2EDF /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		63443C7D2BBAC2D7003B2EDF /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		63443C792BBAB441003B2EDF /* SearchSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSheetView.swift; sourceTree = "<group>"; };
 		63C1FEF32BB9470B007F6FCA /* Trabell_Mini Project 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trabell_Mini Project 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C1FEF62BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trabell_Mini_Project_1App.swift; sourceTree = "<group>"; };
 		63C1FEF82BB9470B007F6FCA /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -69,6 +69,8 @@
 		FBE54B3A2BBBD06A000724B0 /* DataStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStation.swift; sourceTree = "<group>"; };
 		FBE54B3C2BBBD650000724B0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FBE54B3E2BBC38AD000724B0 /* StationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationUtils.swift; sourceTree = "<group>"; };
+		FBE54B402BBC77FA000724B0 /* SearchItemComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemComponent.swift; sourceTree = "<group>"; };
+		FBE54B422BBC7891000724B0 /* ButtonPopulerStationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPopulerStationComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +127,6 @@
 				FBE54B252BBBBD27000724B0 /* Utils */,
 				FBE54B242BBBBCF4000724B0 /* Views */,
 				63C1FEF62BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift */,
-				63443C792BBAB441003B2EDF /* SearchBar.swift */,
-				63443C7D2BBAC2D7003B2EDF /* Test.swift */,
 				63C1FEFC2BB9470C007F6FCA /* Assets.xcassets */,
 				63C1FEFE2BB9470C007F6FCA /* Preview Content */,
 			);
@@ -163,6 +163,7 @@
 			children = (
 				FBE54B302BBBBF2C000724B0 /* Components */,
 				63C1FEF82BB9470B007F6FCA /* SplashView.swift */,
+				63443C792BBAB441003B2EDF /* SearchSheetView.swift */,
 				FBE54B282BBBBDDD000724B0 /* ReminderSheetView.swift */,
 				FBE54B3C2BBBD650000724B0 /* MainView.swift */,
 			);
@@ -193,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				FBE54B312BBBBF4D000724B0 /* StepperComponents.swift */,
+				FBE54B402BBC77FA000724B0 /* SearchItemComponent.swift */,
+				FBE54B422BBC7891000724B0 /* ButtonPopulerStationComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -339,13 +342,14 @@
 				FBE54B292BBBBDDD000724B0 /* ReminderSheetView.swift in Sources */,
 				63C1FEF92BB9470B007F6FCA /* SplashView.swift in Sources */,
 				FBE54B3F2BBC38AD000724B0 /* StationUtils.swift in Sources */,
-				63443C7E2BBAC2D7003B2EDF /* Test.swift in Sources */,
 				FBE54B322BBBBF4D000724B0 /* StepperComponents.swift in Sources */,
 				63C1FEF72BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift in Sources */,
 				FBE54B272BBBBD3F000724B0 /* Color.swift in Sources */,
+				FBE54B432BBC7891000724B0 /* ButtonPopulerStationComponent.swift in Sources */,
+				FBE54B412BBC77FA000724B0 /* SearchItemComponent.swift in Sources */,
 				FBE54B372BBBC40D000724B0 /* LocationUtils.swift in Sources */,
 				FBE54B392BBBC92E000724B0 /* ReminderModel.swift in Sources */,
-				63443C7A2BBAB441003B2EDF /* SearchBar.swift in Sources */,
+				63443C7A2BBAB441003B2EDF /* SearchSheetView.swift in Sources */,
 				FBE54B2F2BBBBE6D000724B0 /* StationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

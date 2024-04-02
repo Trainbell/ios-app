@@ -7,22 +7,24 @@
 
 import SwiftUI
 
-import SwiftUI
 
 struct MainView: View {
-    @State var showBsd = false
+    @State var showSheet = false
     
     // HANYA SEMENTARA NANTI DI TIMPA CODE JEHA
     var body: some View {
         VStack{
             Button("test") {
-               showBsd = true
+                showSheet.toggle()
             }
         }
-        .sheet(isPresented: $showBsd) {
-            ReminderSheetView(isPresented: $showBsd)
+        .sheet(isPresented: $showSheet) {
+            SearchSheetView()
+                .presentationDetents([.fraction(0.95)])
                 .presentationDragIndicator(.visible)
         }
+    
+        .navigationBarBackButtonHidden(true)
     }
 }
 
