@@ -20,17 +20,36 @@ struct CustomStepTextView: View {
     }
 }
 
+enum IndicatorImage {
+    case pin
+    case train
+    case none
+}
+
 struct IndicatorImageView: View {
-    var name:String
+    var indicator: IndicatorImage
     var body: some View {
         ZStack {
-            Circle()
-                .foregroundColor(Color.white)
-                .overlay(Image(systemName: name)
-                    .resizable()
-                    .frame(width: 30, height: 30))
-                .frame(width: 40, height: 40)
+            if (indicator == .none) {
+                Circle()
+                    .foregroundColor(Color.white)
+                    .frame(width: 40, height: 40)
+            } else {
+                Circle()
+                    .foregroundColor(Color.white)
+                    .overlay(Image(getImage())
+                        .resizable()
+                        .frame(width: 30, height: 30))
+                    .frame(width: 40, height: 40)
+            }
         }
-        
+    }
+    
+    func getImage() -> String {
+        if (indicator == .pin){
+            "ic_pin_location"
+        } else {
+            "ic_train"
+        }
     }
 }

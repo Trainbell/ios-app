@@ -9,6 +9,21 @@ import SwiftUI
 import StepperView
 
 struct ReminderSheetView: View {
+    
+    init() {
+        print(getListStep(listStation: stationModels))
+        print(getListIndicator(listStation: stationModels))
+    }
+    
+    @State var indicator = stationModels.map { _ in
+        StepperIndicationType<AnyView>.circle(Colors.teal.rawValue, 12)
+    }
+    
+    @State var step = stationModels.map { station in
+        CustomStepTextView(text: station.stationName)
+    }
+    
+    
     var body: some View {
         VStack {
             HStack {
@@ -29,24 +44,21 @@ struct ReminderSheetView: View {
             .padding(.top, 40)
             
             Divider()
-            StepperView()
-                .addSteps([
-                    CustomStepTextView(text: "Card details"),
-                    CustomStepTextView(text: "Application review"),
-                    CustomStepTextView(text: "Authenticate OTP"),
-                    CustomStepTextView(text: "Create password")
-                ])
-                .indicators([
-                    StepperIndicationType.custom(IndicatorImageView(name: "train.side.front.car")),
-                    StepperIndicationType.custom(IndicatorImageView(name: "train.side.front.car")),
-                    StepperIndicationType.circle(Color.green, 40),
-                    StepperIndicationType.custom(IndicatorImageView(name:"pending"))
-                ])
-                .lineOptions(StepperLineOptions.rounded(4, 8, Color.blue))
-                .stepLifeCycles([StepLifeCycle.completed, .completed, .completed, .pending])
-                .spacing(40)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 50)
+            
+            ScrollView(.vertical, showsIndicators: false) {
+                StepperView()
+                    .addSteps(
+                        self.step
+                    )
+                    .indicators(
+                        self.indicator
+                    )
+                    .lineOptions(StepperLineOptions.rounded(4, 8, Color.blue))
+                    .stepLifeCycles((stationModels).map { _ in StepLifeCycle.pending })
+                    .spacing(40)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 50)
+            }
             
             Button(
                 action: {
@@ -64,6 +76,18 @@ struct ReminderSheetView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(Color(hex: "0xF8EBDD"))
+    }
+    
+    func getListIndicator(listStation: [StationModel] ) -> [StepperIndicationType<IndicatorImageView>] {
+        return listStation.map {_ in
+            StepperIndicationType.custom(IndicatorImageView(indicator: .pin))
+        }
+    }
+    
+    func getListStep(listStation: [StationModel]) -> [CustomStepTextView] {
+        return listStation.map { station in
+            CustomStepTextView(text: station.stationName )
+        }
     }
 }
 

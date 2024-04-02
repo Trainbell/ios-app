@@ -7,6 +7,9 @@
 
 import Foundation
 
-struct StationTimelineModel {
-    
+struct StationModel {
+    let stationName: String
+    let address: String
+    let latitude: Double
+    let longitude: Double
 }

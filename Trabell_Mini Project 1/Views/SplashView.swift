@@ -10,7 +10,10 @@ import SwiftData
 
 
 struct SplashScreenView: View {
+    @State private var isActive: Bool = false
+    
     var body: some View {
+        NavigationStack {
             VStack {
                 Spacer()
                 
@@ -26,20 +29,33 @@ struct SplashScreenView: View {
                     .foregroundColor(Color(hex: "#57575C"))
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding(.top, -25)
-                    
-                    
+                
             }
             
             .background(LinearGradient(gradient: Gradient(colors: [Color (hex: "#EEE8D1"), Color (hex: "#F9ECDE")]), startPoint: .top, endPoint: .bottom)
-                        .edgesIgnoringSafeArea(.all))
-            
-            
+                .edgesIgnoringSafeArea(.all))
+            .background(
+                NavigationLink(
+                    destination: MainView(),
+                    isActive: $isActive,
+                    label: {
+                        EmptyView()
+                    })
+                .isDetailLink(false)
+                
+            )
+            .onAppear {
+                Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { _ in
+                    self.isActive = true
+                }
+            }
         }
-           
+    }
+    
     
 }
 
 #Preview {
     SplashScreenView()
-       
+    
 }

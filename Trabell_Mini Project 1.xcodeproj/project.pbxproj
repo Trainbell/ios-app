@@ -20,8 +20,12 @@
 		FBE54B272BBBBD3F000724B0 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B262BBBBD3F000724B0 /* Color.swift */; };
 		FBE54B292BBBBDDD000724B0 /* ReminderSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B282BBBBDDD000724B0 /* ReminderSheetView.swift */; };
 		FBE54B2C2BBBBDED000724B0 /* StepperView in Frameworks */ = {isa = PBXBuildFile; productRef = FBE54B2B2BBBBDED000724B0 /* StepperView */; };
-		FBE54B2F2BBBBE6D000724B0 /* StationTimelineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B2E2BBBBE6D000724B0 /* StationTimelineModel.swift */; };
+		FBE54B2F2BBBBE6D000724B0 /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B2E2BBBBE6D000724B0 /* StationModel.swift */; };
 		FBE54B322BBBBF4D000724B0 /* StepperComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B312BBBBF4D000724B0 /* StepperComponents.swift */; };
+		FBE54B372BBBC40D000724B0 /* LocationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B362BBBC40D000724B0 /* LocationUtils.swift */; };
+		FBE54B392BBBC92E000724B0 /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B382BBBC92E000724B0 /* ReminderModel.swift */; };
+		FBE54B3B2BBBD06A000724B0 /* DataStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B3A2BBBD06A000724B0 /* DataStation.swift */; };
+		FBE54B3D2BBBD650000724B0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B3C2BBBD650000724B0 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +61,12 @@
 		FB4CC8622BBA6B28003D2D4C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FBE54B262BBBBD3F000724B0 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FBE54B282BBBBDDD000724B0 /* ReminderSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSheetView.swift; sourceTree = "<group>"; };
-		FBE54B2E2BBBBE6D000724B0 /* StationTimelineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTimelineModel.swift; sourceTree = "<group>"; };
+		FBE54B2E2BBBBE6D000724B0 /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
 		FBE54B312BBBBF4D000724B0 /* StepperComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperComponents.swift; sourceTree = "<group>"; };
+		FBE54B362BBBC40D000724B0 /* LocationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUtils.swift; sourceTree = "<group>"; };
+		FBE54B382BBBC92E000724B0 /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
+		FBE54B3A2BBBD06A000724B0 /* DataStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStation.swift; sourceTree = "<group>"; };
+		FBE54B3C2BBBD650000724B0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +119,7 @@
 		63C1FEF52BB9470B007F6FCA /* Trabell_Mini Project 1 */ = {
 			isa = PBXGroup;
 			children = (
-				FBE54B2D2BBBBE55000724B0 /* Model */,
+				FBE54B2D2BBBBE55000724B0 /* Models */,
 				FBE54B252BBBBD27000724B0 /* Utils */,
 				FBE54B242BBBBCF4000724B0 /* Views */,
 				63C1FEF62BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift */,
@@ -154,6 +162,7 @@
 				FBE54B302BBBBF2C000724B0 /* Components */,
 				63C1FEF82BB9470B007F6FCA /* SplashView.swift */,
 				FBE54B282BBBBDDD000724B0 /* ReminderSheetView.swift */,
+				FBE54B3C2BBBD650000724B0 /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,16 +171,19 @@
 			isa = PBXGroup;
 			children = (
 				FBE54B262BBBBD3F000724B0 /* Color.swift */,
+				FBE54B362BBBC40D000724B0 /* LocationUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		FBE54B2D2BBBBE55000724B0 /* Model */ = {
+		FBE54B2D2BBBBE55000724B0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FBE54B2E2BBBBE6D000724B0 /* StationTimelineModel.swift */,
+				FBE54B2E2BBBBE6D000724B0 /* StationModel.swift */,
+				FBE54B382BBBC92E000724B0 /* ReminderModel.swift */,
+				FBE54B3A2BBBD06A000724B0 /* DataStation.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FBE54B302BBBBF2C000724B0 /* Components */ = {
@@ -319,14 +331,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBE54B3B2BBBD06A000724B0 /* DataStation.swift in Sources */,
+				FBE54B3D2BBBD650000724B0 /* MainView.swift in Sources */,
 				FBE54B292BBBBDDD000724B0 /* ReminderSheetView.swift in Sources */,
 				63C1FEF92BB9470B007F6FCA /* SplashView.swift in Sources */,
 				63443C7E2BBAC2D7003B2EDF /* Test.swift in Sources */,
 				FBE54B322BBBBF4D000724B0 /* StepperComponents.swift in Sources */,
 				63C1FEF72BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift in Sources */,
 				FBE54B272BBBBD3F000724B0 /* Color.swift in Sources */,
+				FBE54B372BBBC40D000724B0 /* LocationUtils.swift in Sources */,
+				FBE54B392BBBC92E000724B0 /* ReminderModel.swift in Sources */,
 				63443C7A2BBAB441003B2EDF /* SearchBar.swift in Sources */,
-				FBE54B2F2BBBBE6D000724B0 /* StationTimelineModel.swift in Sources */,
+				FBE54B2F2BBBBE6D000724B0 /* StationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
