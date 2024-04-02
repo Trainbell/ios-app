@@ -43,9 +43,8 @@ struct SearchBar: View {
                         .background(Color(hex: "F5F5F0"))
                         .cornerRadius(12)
                         .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.gray, lineWidth: 1))
-                        
-                        
                     }
+            
             .frame(alignment: .top)
             .padding(.top, 54)
             .padding(.horizontal)
@@ -59,38 +58,68 @@ struct SearchBar: View {
                 .padding(.top, 21)
                
             
-            HStack {
-                Button("Tanah Abang"){
-                    //action
+            VStack (alignment: .leading){
+                HStack {
+                    buttonPopularStation(buttonTitle: "Tanah Abang")
+                    buttonPopularStation(buttonTitle: "Duri")
+                    buttonPopularStation(buttonTitle: "Tangerang")
                 }
-                .buttonStyle(.borderedProminent)
-                .tint(Color(hex: "6F9D80"))
-                .buttonBorderShape(.roundedRectangle(radius: 16))
-                .frame(height: 28)
-                .fontWeight(.medium)
-                .font(.caption)
-                
+                HStack{
+                    buttonPopularStation(buttonTitle: "Jatinegara")
+                    buttonPopularStation(buttonTitle: "Rawa Buntu")
+                    buttonPopularStation(buttonTitle: "Manggarai")
+                }
             }
             .padding(.top, 3)
             .padding(.leading, 20)
+            
+            VStack {
+                Image("Search Illust")
+                    .resizable().aspectRatio( contentMode: .fit)
+                    .frame(width: 204.98, height: 168.83)
+                    
+                
+                Text("content")
+            }
+            .padding(50)
             
             
             Spacer()
             
             
-
         }
-        
         
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(hex: "F8EBDD"))
         .presentationCornerRadius(48)
         .presentationDragIndicator(.visible)
-
+        
+        
     }
         
     
 }
+
+struct buttonPopularStation: View{
+    var buttonTitle: String
+    
+    var body: some View{
+        HStack {
+            Button(buttonTitle){
+                //action
+            }
+            .buttonStyle(.borderedProminent)
+            .tint(Color(hex: "6F9D80"))
+            .buttonBorderShape(.roundedRectangle(radius: 16))
+            .frame(height: 28)
+            .fontWeight(.medium)
+            .font(.caption)
+            .padding(.trailing, 6)
+           
+        }
+    }
+}
+
 
 #Preview {
     SearchBar()
