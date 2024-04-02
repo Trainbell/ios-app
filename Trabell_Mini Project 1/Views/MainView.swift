@@ -20,7 +20,7 @@ struct MainView: View {
             }
         }
         .sheet(isPresented: $showBsd) {
-            ReminderSheetView()
+            ReminderSheetView(isPresented: $showBsd)
                 .presentationDragIndicator(.visible)
         }
     }

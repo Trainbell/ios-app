@@ -26,6 +26,7 @@
 		FBE54B392BBBC92E000724B0 /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B382BBBC92E000724B0 /* ReminderModel.swift */; };
 		FBE54B3B2BBBD06A000724B0 /* DataStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B3A2BBBD06A000724B0 /* DataStation.swift */; };
 		FBE54B3D2BBBD650000724B0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B3C2BBBD650000724B0 /* MainView.swift */; };
+		FBE54B3F2BBC38AD000724B0 /* StationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B3E2BBC38AD000724B0 /* StationUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		FBE54B382BBBC92E000724B0 /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
 		FBE54B3A2BBBD06A000724B0 /* DataStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStation.swift; sourceTree = "<group>"; };
 		FBE54B3C2BBBD650000724B0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FBE54B3E2BBC38AD000724B0 /* StationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			children = (
 				FBE54B262BBBBD3F000724B0 /* Color.swift */,
 				FBE54B362BBBC40D000724B0 /* LocationUtils.swift */,
+				FBE54B3E2BBC38AD000724B0 /* StationUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				FBE54B3D2BBBD650000724B0 /* MainView.swift in Sources */,
 				FBE54B292BBBBDDD000724B0 /* ReminderSheetView.swift in Sources */,
 				63C1FEF92BB9470B007F6FCA /* SplashView.swift in Sources */,
+				FBE54B3F2BBC38AD000724B0 /* StationUtils.swift in Sources */,
 				63443C7E2BBAC2D7003B2EDF /* Test.swift in Sources */,
 				FBE54B322BBBBF4D000724B0 /* StepperComponents.swift in Sources */,
 				63C1FEF72BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift in Sources */,

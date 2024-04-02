@@ -7,9 +7,16 @@
 
 import Foundation
 
-struct StationModel: Hashable, Identifiable {
+struct StationModel: Hashable, Identifiable, Equatable {
+    internal init( stationName: String, address: String, latitude: Double, longitude: Double) {
+        self.id = UUID().uuidString
+        self.stationName = stationName
+        self.address = address
+        self.latitude = latitude
+        self.longitude = longitude
+    }
     
-    let id: Int
+    let id: String
     let stationName: String
     let address: String
     let latitude: Double

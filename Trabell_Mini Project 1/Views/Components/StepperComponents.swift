@@ -9,13 +9,21 @@ import SwiftUI
 import StepperView
 
 struct CustomStepTextView: View {
-    var text:String
+    var text : String
+    var desc: String
     var body: some View {
         VStack {
-            TextView(text: text, font: Font.system(size: 16, weight: Font.Weight.regular))
-                .foregroundColor(Color.black)
+            Text(text)
+                .font(.system(size: 16))
+                .fontWeight(.bold)
+                .foregroundColor(Color(hex: "0xF44443D"))
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .offset(x: -15)
+            Text(desc)
+                .font(.system(size: 12))
+                .foregroundColor(Color(hex: "0xF#44443D"))
+                .lineLimit(1)
+                .truncationMode(.tail)
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
 }
@@ -32,24 +40,27 @@ struct IndicatorImageView: View {
         ZStack {
             if (indicator == .none) {
                 Circle()
-                    .foregroundColor(Color.white)
-                    .frame(width: 40, height: 40)
+                    .overlay(Circle()
+                        .foregroundColor(Color(hex: "0xF0D714F"))
+                        .overlay(Circle()
+                            .foregroundColor(Color(hex: "0xF8EBDD"))
+                            .frame(width: 15, height: 15))
+                            .frame(width: 25, height: 25))
+                    .foregroundColor(Color(hex: "0xF8EBDD"))
+                    .frame(width: 36, height: 36)
             } else {
                 Circle()
-                    .foregroundColor(Color.white)
-                    .overlay(Image(getImage())
+                    .foregroundColor(indicator == .pin ? Color(hex: "0xFFFBC05") : Color(hex: "0xF0D714F"))
+                    .overlay(Image(indicator == .pin ? "ic_pin_location" : "ic_train")
                         .resizable()
-                        .frame(width: 30, height: 30))
-                    .frame(width: 40, height: 40)
+                        .frame(width: 29, height: 29))
+                    .frame(width: 36, height: 36)
+                
             }
         }
     }
-    
-    func getImage() -> String {
-        if (indicator == .pin){
-            "ic_pin_location"
-        } else {
-            "ic_train"
-        }
-    }
+}
+
+#Preview {
+    IndicatorImageView(indicator: .none )
 }
