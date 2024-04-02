@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct StationModel {
+struct StationModel: Hashable, Identifiable {
+    
+    let id: Int
     let stationName: String
     let address: String
     let latitude: Double
