@@ -10,13 +10,14 @@
 		63443C7A2BBAB441003B2EDF /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63443C792BBAB441003B2EDF /* SearchBar.swift */; };
 		63443C7E2BBAC2D7003B2EDF /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63443C7D2BBAC2D7003B2EDF /* Test.swift */; };
 		63C1FEF72BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FEF62BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift */; };
-		63C1FEF92BB9470B007F6FCA /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FEF82BB9470B007F6FCA /* SplashScreenView.swift */; };
+		63C1FEF92BB9470B007F6FCA /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FEF82BB9470B007F6FCA /* SplashView.swift */; };
 		63C1FEFD2BB9470C007F6FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C1FEFC2BB9470C007F6FCA /* Assets.xcassets */; };
 		63C1FF002BB9470C007F6FCA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C1FEFF2BB9470C007F6FCA /* Preview Assets.xcassets */; };
 		63C1FF0A2BB9470C007F6FCA /* Trabell_Mini_Project_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FF092BB9470C007F6FCA /* Trabell_Mini_Project_1Tests.swift */; };
 		63C1FF142BB9470C007F6FCA /* Trabell_Mini_Project_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FF132BB9470C007F6FCA /* Trabell_Mini_Project_1UITests.swift */; };
 		63C1FF162BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FF152BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift */; };
 		FB4CC8632BBA6B28003D2D4C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FB4CC8622BBA6B28003D2D4C /* .gitignore */; };
+		FBE54B272BBBBD3F000724B0 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B262BBBBD3F000724B0 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,7 @@
 		63443C7D2BBAC2D7003B2EDF /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		63C1FEF32BB9470B007F6FCA /* Trabell_Mini Project 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trabell_Mini Project 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C1FEF62BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trabell_Mini_Project_1App.swift; sourceTree = "<group>"; };
-		63C1FEF82BB9470B007F6FCA /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		63C1FEF82BB9470B007F6FCA /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		63C1FEFC2BB9470C007F6FCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63C1FEFF2BB9470C007F6FCA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		63C1FF052BB9470C007F6FCA /* Trabell_Mini Project 1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trabell_Mini Project 1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +51,7 @@
 		63C1FF132BB9470C007F6FCA /* Trabell_Mini_Project_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trabell_Mini_Project_1UITests.swift; sourceTree = "<group>"; };
 		63C1FF152BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trabell_Mini_Project_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FB4CC8622BBA6B28003D2D4C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FBE54B262BBBBD3F000724B0 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +103,9 @@
 		63C1FEF52BB9470B007F6FCA /* Trabell_Mini Project 1 */ = {
 			isa = PBXGroup;
 			children = (
+				FBE54B252BBBBD27000724B0 /* Utils */,
+				FBE54B242BBBBCF4000724B0 /* Views */,
 				63C1FEF62BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift */,
-				63C1FEF82BB9470B007F6FCA /* SplashScreenView.swift */,
 				63443C792BBAB441003B2EDF /* SearchBar.swift */,
 				63443C7D2BBAC2D7003B2EDF /* Test.swift */,
 				63C1FEFC2BB9470C007F6FCA /* Assets.xcassets */,
@@ -134,6 +137,22 @@
 				63C1FF152BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift */,
 			);
 			path = "Trabell_Mini Project 1UITests";
+			sourceTree = "<group>";
+		};
+		FBE54B242BBBBCF4000724B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63C1FEF82BB9470B007F6FCA /* SplashView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FBE54B252BBBBD27000724B0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FBE54B262BBBBD3F000724B0 /* Color.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63C1FEF92BB9470B007F6FCA /* SplashScreenView.swift in Sources */,
+				63C1FEF92BB9470B007F6FCA /* SplashView.swift in Sources */,
 				63443C7E2BBAC2D7003B2EDF /* Test.swift in Sources */,
 				63C1FEF72BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift in Sources */,
+				FBE54B272BBBBD3F000724B0 /* Color.swift in Sources */,
 				63443C7A2BBAB441003B2EDF /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
