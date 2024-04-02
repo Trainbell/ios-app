@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		63C1FEF72BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FEF62BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift */; };
-		63C1FEF92BB9470B007F6FCA /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FEF82BB9470B007F6FCA /* SplashScreenView.swift */; };
+		63C1FEF92BB9470B007F6FCA /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FEF82BB9470B007F6FCA /* SplashView.swift */; };
 		63C1FEFD2BB9470C007F6FCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C1FEFC2BB9470C007F6FCA /* Assets.xcassets */; };
 		63C1FF002BB9470C007F6FCA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C1FEFF2BB9470C007F6FCA /* Preview Assets.xcassets */; };
 		63C1FF0A2BB9470C007F6FCA /* Trabell_Mini_Project_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FF092BB9470C007F6FCA /* Trabell_Mini_Project_1Tests.swift */; };
 		63C1FF142BB9470C007F6FCA /* Trabell_Mini_Project_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FF132BB9470C007F6FCA /* Trabell_Mini_Project_1UITests.swift */; };
 		63C1FF162BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FF152BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift */; };
 		FB4CC8632BBA6B28003D2D4C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FB4CC8622BBA6B28003D2D4C /* .gitignore */; };
+		FBD6E81E2BBB821F008046AA /* StepperView in Frameworks */ = {isa = PBXBuildFile; productRef = FBD6E81D2BBB821F008046AA /* StepperView */; };
+		FBD6E8202BBB84D4008046AA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD6E81F2BBB84D4008046AA /* Color.swift */; };
+		FBF8B1752BBA8D2400EBA968 /* ReminderSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF8B1742BBA8D2400EBA968 /* ReminderSheet.swift */; };
+		FBF8B1782BBA8E8100EBA968 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF8B1772BBA8E8100EBA968 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +41,7 @@
 /* Begin PBXFileReference section */
 		63C1FEF32BB9470B007F6FCA /* Trabell_Mini Project 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trabell_Mini Project 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C1FEF62BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trabell_Mini_Project_1App.swift; sourceTree = "<group>"; };
-		63C1FEF82BB9470B007F6FCA /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		63C1FEF82BB9470B007F6FCA /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		63C1FEFC2BB9470C007F6FCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63C1FEFF2BB9470C007F6FCA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		63C1FF052BB9470C007F6FCA /* Trabell_Mini Project 1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trabell_Mini Project 1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +50,9 @@
 		63C1FF132BB9470C007F6FCA /* Trabell_Mini_Project_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trabell_Mini_Project_1UITests.swift; sourceTree = "<group>"; };
 		63C1FF152BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trabell_Mini_Project_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FB4CC8622BBA6B28003D2D4C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FBD6E81F2BBB84D4008046AA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		FBF8B1742BBA8D2400EBA968 /* ReminderSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSheet.swift; sourceTree = "<group>"; };
+		FBF8B1772BBA8E8100EBA968 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD6E81E2BBB821F008046AA /* StepperView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,8 +105,10 @@
 		63C1FEF52BB9470B007F6FCA /* Trabell_Mini Project 1 */ = {
 			isa = PBXGroup;
 			children = (
+				FBF8B1722BBA882E00EBA968 /* Utils */,
+				FBF8B1712BBA83A800EBA968 /* Service */,
+				FBF8B1702BBA839600EBA968 /* View */,
 				63C1FEF62BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift */,
-				63C1FEF82BB9470B007F6FCA /* SplashScreenView.swift */,
 				63C1FEFC2BB9470C007F6FCA /* Assets.xcassets */,
 				63C1FEFE2BB9470C007F6FCA /* Preview Content */,
 			);
@@ -130,6 +140,39 @@
 			path = "Trabell_Mini Project 1UITests";
 			sourceTree = "<group>";
 		};
+		FBD6E81B2BBB14B8008046AA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FBF8B1702BBA839600EBA968 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBF8B1742BBA8D2400EBA968 /* ReminderSheet.swift */,
+				FBF8B1772BBA8E8100EBA968 /* MainView.swift */,
+				63C1FEF82BB9470B007F6FCA /* SplashView.swift */,
+				FBD6E81B2BBB14B8008046AA /* Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FBF8B1712BBA83A800EBA968 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FBF8B1722BBA882E00EBA968 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FBD6E81F2BBB84D4008046AA /* Color.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +189,9 @@
 			dependencies = (
 			);
 			name = "Trabell_Mini Project 1";
+			packageProductDependencies = (
+				FBD6E81D2BBB821F008046AA /* StepperView */,
+			);
 			productName = "Trabell_Mini Project 1";
 			productReference = 63C1FEF32BB9470B007F6FCA /* Trabell_Mini Project 1.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +264,9 @@
 				Base,
 			);
 			mainGroup = 63C1FEEA2BB9470B007F6FCA;
+			packageReferences = (
+				FBD6E81C2BBB821F008046AA /* XCRemoteSwiftPackageReference "StepperView" */,
+			);
 			productRefGroup = 63C1FEF42BB9470B007F6FCA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,8 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63C1FEF92BB9470B007F6FCA /* SplashScreenView.swift in Sources */,
+				63C1FEF92BB9470B007F6FCA /* SplashView.swift in Sources */,
+				FBF8B1782BBA8E8100EBA968 /* MainView.swift in Sources */,
 				63C1FEF72BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift in Sources */,
+				FBD6E8202BBB84D4008046AA /* Color.swift in Sources */,
+				FBF8B1752BBA8D2400EBA968 /* ReminderSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +638,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FBD6E81C2BBB821F008046AA /* XCRemoteSwiftPackageReference "StepperView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/badrinathvm/StepperView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBD6E81D2BBB821F008046AA /* StepperView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBD6E81C2BBB821F008046AA /* XCRemoteSwiftPackageReference "StepperView" */;
+			productName = StepperView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63C1FEEB2BB9470B007F6FCA /* Project object */;
 }

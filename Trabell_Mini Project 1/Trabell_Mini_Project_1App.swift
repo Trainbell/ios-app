@@ -13,8 +13,9 @@ struct Trabell_Mini_Project_1App: App {
 
     var body: some Scene {
         WindowGroup {
-            
-            SplashScreenView()
+            NavigationStack {
+                SplashView()
+            }
         }
         
     }
