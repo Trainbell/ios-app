@@ -36,7 +36,7 @@ struct SplashScreenView: View {
             .edgesIgnoringSafeArea(.all))
         .background(
             NavigationLink(
-                destination: MainView(),
+                destination: HomeView(),
                 isActive: $isActive,
                 label: {
                     EmptyView()
