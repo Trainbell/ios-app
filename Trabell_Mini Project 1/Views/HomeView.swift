@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
+    @State var showSheet = false
     var body: some View {
         let background_color = Color(red: 0.976, green: 0.925, blue: 0.87)
         ZStack{
@@ -23,12 +24,20 @@ struct ContentView: View {
                                     .foregroundStyle(Color(red: 0.266, green: 0.266, blue: 0.24))
                                     .frame(width: 100)
                                 ZStack{
-                                    RoundedRectangle(cornerRadius: 27)
-                                        .fill(Color(red: 0.984, green: 0.729, blue: 0.286))
-                                        .frame(width: 112,height: 34)
-                                    Text("Start")
-                                        .foregroundStyle(.black)
-                                        .bold()
+                                    Button{
+                                        showSheet.toggle()
+                                    }
+                                label:{
+                                    ZStack{
+                                        RoundedRectangle(cornerRadius: 27)
+                                            .fill(Color(red: 0.984, green: 0.729, blue: 0.286))
+                                            .frame(width: 112,height: 34)
+                                        Text("Start")
+                                            .foregroundStyle(.black)
+                                            .bold()
+                                    }
+                                }
+                                    
                                 }
                                 
                             }.padding()
@@ -46,17 +55,16 @@ struct ContentView: View {
                                 .padding()
                             
                             Spacer()
-                            //                                Text("View More")
-                            //                                    .bold()
-                            //                                    .padding()
-                            //                                    .foregroundStyle(Color(red: 0.4352, green: 0.6157, blue: 0.502))
-                            //                                    .bold()
                         }
                         
                     }
                 }
                 
                 HStack{
+                    Button{
+                        
+                    }
+                label:{
                     ZStack{
                     RoundedRectangle(cornerRadius: 18)
                         .fill(Color(red: 0.7764, green: 0.7764, blue: 0.7294))
@@ -71,6 +79,7 @@ struct ContentView: View {
                                 .foregroundColor(Color(red: 0.557, green: 0.557, blue: 0.5127))
                         }
                     }
+                }
                     .padding()
                     Spacer()
                 }
@@ -104,9 +113,16 @@ struct ContentView: View {
             }
         }.edgesIgnoringSafeArea(.all)
             .background(background_color)
+            .sheet(isPresented: $showSheet) {
+                SearchSheetView()
+                    .presentationDetents([.fraction(0.95)])
+                    .presentationDragIndicator(.visible)
+            }
+        
+            .navigationBarBackButtonHidden(true)
     }
 }
 
 #Preview {
-    ContentView()
+    HomeView()
 }

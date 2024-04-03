@@ -16,6 +16,7 @@
 		63C1FF142BB9470C007F6FCA /* Trabell_Mini_Project_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FF132BB9470C007F6FCA /* Trabell_Mini_Project_1UITests.swift */; };
 		63C1FF162BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FF152BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift */; };
 		958137B62BBCE4A800F71B37 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958137B52BBCE4A800F71B37 /* HomeView.swift */; };
+		958137BA2BBCEFE000F71B37 /* HomeCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958137B92BBCEFE000F71B37 /* HomeCardComponent.swift */; };
 		FB4CC8632BBA6B28003D2D4C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FB4CC8622BBA6B28003D2D4C /* .gitignore */; };
 		FBE54B272BBBBD3F000724B0 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B262BBBBD3F000724B0 /* Color.swift */; };
 		FBE54B292BBBBDDD000724B0 /* ReminderSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B282BBBBDDD000724B0 /* ReminderSheetView.swift */; };
@@ -61,6 +62,7 @@
 		63C1FF132BB9470C007F6FCA /* Trabell_Mini_Project_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trabell_Mini_Project_1UITests.swift; sourceTree = "<group>"; };
 		63C1FF152BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trabell_Mini_Project_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		958137B52BBCE4A800F71B37 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		958137B92BBCEFE000F71B37 /* HomeCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardComponent.swift; sourceTree = "<group>"; };
 		FB4CC8622BBA6B28003D2D4C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FBE54B262BBBBD3F000724B0 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FBE54B282BBBBDDD000724B0 /* ReminderSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSheetView.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				FBE54B312BBBBF4D000724B0 /* StepperComponents.swift */,
 				FBE54B402BBC77FA000724B0 /* SearchItemComponent.swift */,
 				FBE54B422BBC7891000724B0 /* ButtonPopulerStationComponent.swift */,
+				958137B92BBCEFE000F71B37 /* HomeCardComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				FBE54B3F2BBC38AD000724B0 /* StationUtils.swift in Sources */,
 				FBE54B322BBBBF4D000724B0 /* StepperComponents.swift in Sources */,
 				63C1FEF72BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift in Sources */,
+				958137BA2BBCEFE000F71B37 /* HomeCardComponent.swift in Sources */,
 				FBE54B272BBBBD3F000724B0 /* Color.swift in Sources */,
 				FBE54B432BBC7891000724B0 /* ButtonPopulerStationComponent.swift in Sources */,
 				FBE54B412BBC77FA000724B0 /* SearchItemComponent.swift in Sources */,
