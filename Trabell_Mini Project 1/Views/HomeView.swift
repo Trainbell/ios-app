@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     @State var showSheet = false
+    @State var showRoutine = false
+    
     var body: some View {
         let background_color = Color(red: 0.976, green: 0.925, blue: 0.87)
         ZStack{
@@ -51,10 +53,18 @@ struct HomeView: View {
                         HStack{
                             Text("Routines")
                                 .foregroundStyle(Color(red: 0.266, green: 0.266, blue: 0.2392))
+                                .font(.title2)
                                 .bold()
                                 .padding()
                             
                             Spacer()
+                            Button(action: {
+                                showRoutine.toggle()
+                            }, label: {
+                                Text("View More")
+                                    .font(.caption)
+                            })
+                            .padding()
                         }
                         
                     }
@@ -62,7 +72,7 @@ struct HomeView: View {
                 
                 HStack{
                     Button{
-                        
+                        showSheet.toggle()
                     }
                 label:{
                     ZStack{
@@ -83,9 +93,12 @@ struct HomeView: View {
                     .padding()
                     Spacer()
                 }
+                .padding(.top, -20)
+                
                 VStack{
                     HStack{
                         Text("Recents")
+                            .font(.title2)
                             .frame(alignment: .leading)
                             .foregroundStyle(Color(red: 0.266, green: 0.266, blue: 0.2392))
                             .bold()
@@ -105,9 +118,10 @@ struct HomeView: View {
                             .padding()
                     }.background(Color(white: 1, opacity: 0.5))
                         .cornerRadius(27)
-                        .padding()
+                        .padding(.top, -10)
                         
                 }
+                
                 Spacer()
                 
             }
@@ -118,6 +132,11 @@ struct HomeView: View {
                     .presentationDetents([.fraction(0.95)])
                     .presentationDragIndicator(.visible)
                     .presentationCornerRadius(48)
+            }
+            .sheet(isPresented: $showRoutine){
+                RoutineSheetView()
+                .presentationCornerRadius(48)
+                .presentationDragIndicator(.visible)
             }
         
             .navigationBarBackButtonHidden(true)

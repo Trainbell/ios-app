@@ -22,15 +22,17 @@ struct SplashScreenView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 225, height: 73)
                 .padding(.bottom, 55)
+                .frame(maxWidth: .infinity, alignment: .center)
             Spacer()
             
-            Text("Ringing in the right stops, gently and surely!")
-                .font(.footnote)
-                .foregroundColor(Color(hex: "#57575C"))
-                .frame(maxWidth: .infinity, alignment: .center)
-                .padding(.top, -25)
+//            Text("Ringing in the right stops, gently and surely!")
+//                .font(.footnote)
+//                .foregroundColor(Color(hex: "#57575C"))
+//                .frame(maxWidth: .infinity, alignment: .center)
+//                .padding(.top, -25)
             
         }
+        
         
         .background(LinearGradient(gradient: Gradient(colors: [Color (hex: "#EEE8D1"), Color (hex: "#F9ECDE")]), startPoint: .top, endPoint: .bottom)
             .edgesIgnoringSafeArea(.all))
@@ -63,7 +65,7 @@ struct SplashScreenView: View {
     
 }
 
-//#Preview {
-//    SplashScreenView()
-//
-//}
+#Preview {
+    SplashScreenView()
+
+}

@@ -9,46 +9,83 @@ import SwiftUI
 
 struct RoutineSheetView: View {
     @State var routineStation: StationModel? = nil
+    @State var showSheet = false
+    @State var showSearchSheet = false
     
     var body: some View {
-        ScrollView{
-            VStack {
-                HStack {
-                    Text("Routine")
-                        .font(.system(size: 24))
+        
+        VStack {
+            HStack {
+                Text("Routine")
+                    .font(.system(size: 24))
                     .bold()
-                    
-                    Spacer()
-                }
-                .padding(20)
+                
                 Spacer()
-                
-                Divider()
-                
+            }
+            .padding(.leading, 20)
+            .padding(.bottom, -5)
+            
+            
+            
+            
+            Divider()
+                .padding()
+            
+            ScrollView{
                 VStack{
                     
-                     ForEach(stationModels.filter { $0.isRoutine }) { station in
-                         VStack{
-                             Button(action: {
-                                 routineStation = station
-                                 
-                                 
-                             }){
-                                 RoutineComponent(station: station)
-                             }
-                             Divider()
-                                 .padding(.vertical, 12)
-
-                         }
-                               }
-                        
+                    ForEach(stationModels.filter { $0.isRoutine == true}) { station in
+                        VStack{
+                            Button(action: {
+                                routineStation = station
+                                showSheet.toggle()
+                                
+                            }){
+                                RoutineComponent(station: station)
+                            }
+                            Divider()
+                                .padding(.vertical, 12)
+                            
+                        }
+                    }
+                    
                 }
-            
+                .padding(.leading, 22)
                 
             }
+            Button(
+                action: {
+                    showSearchSheet.toggle()
+                   
+                    
+                }, label:  {
+                    Text("Add Routine")
+                        .frame(maxWidth: .infinity)
+                }
+            )
+            .tint(Color(hex: "0xF8970E"))
+            .padding(.horizontal, 20)
+            .padding(.top, 20)
+            .buttonStyle(.borderedProminent)
+            .controlSize(.extraLarge)
+            
+            
         }
+        .padding(.top, 50)
+        
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(Color(hex: "0xF8EBDD"))
+        .sheet(isPresented: $showSheet){
+            ReminderSheetView(destinationStation: $routineStation, isPresented: $showSheet)
+                .presentationCornerRadius(48)
+        }
+        .sheet(isPresented: $showSearchSheet) {
+            SearchSheetView()
+                .presentationDetents([.fraction(0.95)])
+                .presentationDragIndicator(.visible)
+                .presentationCornerRadius(48)
+            
+        }
     }
 }
 

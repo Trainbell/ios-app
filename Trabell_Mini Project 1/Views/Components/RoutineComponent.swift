@@ -17,7 +17,7 @@ struct RoutineComponent: View {
                 .font(.system(size: 22))
                 .padding(.trailing, 0.2069)
                 .foregroundColor(Color(hex: "6F9D80"))
-            
+                .padding(.trailing, 5)
             VStack (alignment: .leading) {
                 Text(station.stationName)
                     .foregroundStyle(Color(hex: "44443D"))

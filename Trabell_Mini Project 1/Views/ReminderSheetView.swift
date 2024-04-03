@@ -30,6 +30,7 @@ struct ReminderSheetView: View {
                         }
                     isRoutine.toggle()
                     
+                    
                 }){
                     if(self.isRoutine == true){
                         Image(systemName: "bookmark.fill")
