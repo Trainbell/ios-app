@@ -16,6 +16,8 @@ struct SearchSheetView: View {
     @State var showSheet = false
     @State var searchResults: [StationModel] = []
     @State var selectedStation: StationModel? = nil
+
+    
     
     var body: some View {
         
@@ -76,14 +78,25 @@ struct SearchSheetView: View {
                 
                 VStack (alignment: .leading){
                     HStack {
-                        ButtonPopulerStationComponent(buttonTitle: "Tanah Abang")
-                        ButtonPopulerStationComponent(buttonTitle: "Duri")
-                        ButtonPopulerStationComponent(buttonTitle: "Tangerang")
+                        ButtonPopulerStationComponent(buttonTitle: "Tanah Abang", callback: {
+                            selectedStation = stationModels.first { $0.stationName.contains("Tanah Abang") }
+                            showSheet.toggle()
+                        })
+                        
+                        
+                        ButtonPopulerStationComponent(buttonTitle: "Duri", callback: {})
+                        ButtonPopulerStationComponent(buttonTitle: "Tangerang", callback: {})
                     }
                     HStack{
-                        ButtonPopulerStationComponent(buttonTitle: "Jatinegara")
-                        ButtonPopulerStationComponent(buttonTitle: "Rawa Buntu")
-                        ButtonPopulerStationComponent(buttonTitle: "Manggarai")
+                        ButtonPopulerStationComponent(buttonTitle: "Jatinegara", callback: {})
+                        ButtonPopulerStationComponent(buttonTitle: "Rawa Buntu", callback: {
+                            selectedStation = stationModels.first { $0.stationName.contains("Rawa Buntu") }
+                            showSheet.toggle()
+                        })
+                        
+                        ButtonPopulerStationComponent(buttonTitle: "Manggarai", callback: {})
+
+                        
                     }
                     
                 }
@@ -91,8 +104,9 @@ struct SearchSheetView: View {
                 .padding(.top, 3)
                 .padding(.leading, -55)
                 
+                
                 if searchResults.isEmpty {
-                    VStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) { //change into list of search station
+                    VStack (alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
                         Spacer()
                             .frame(height: 80)
                         Image("Search Illust")
@@ -134,6 +148,7 @@ struct SearchSheetView: View {
                     .padding(.top, 16)
                     
                 }
+                
             }
             
         }
@@ -141,7 +156,8 @@ struct SearchSheetView: View {
         .background(Color(hex: "F8EBDD"))
         .sheet(isPresented: $showSheet){
             ReminderSheetView(destinationStation: $selectedStation, isPresented: $showSheet)
-
+                .presentationCornerRadius(48)
+            
         }
         
     }

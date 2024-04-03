@@ -8,12 +8,14 @@
 import Foundation
 
 struct StationModel: Hashable, Identifiable, Equatable {
-    internal init( stationName: String, address: String, latitude: Double, longitude: Double) {
+    internal init( stationName: String, address: String, latitude: Double, longitude: Double, isRoutine: Bool = false) {
         self.id = UUID().uuidString
         self.stationName = stationName
         self.address = address
         self.latitude = latitude
         self.longitude = longitude
+        self.isRoutine = isRoutine
+        
     }
     
     let id: String
@@ -21,4 +23,6 @@ struct StationModel: Hashable, Identifiable, Equatable {
     let address: String
     let latitude: Double
     let longitude: Double
+    var isRoutine: Bool
+    
 }

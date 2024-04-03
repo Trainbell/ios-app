@@ -117,6 +117,7 @@ struct HomeView: View {
                 SearchSheetView()
                     .presentationDetents([.fraction(0.95)])
                     .presentationDragIndicator(.visible)
+                    .presentationCornerRadius(48)
             }
         
             .navigationBarBackButtonHidden(true)

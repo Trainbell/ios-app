@@ -7,7 +7,7 @@
 
 import Foundation
 
-let stationModels: [StationModel] = [
+var stationModels: [StationModel] = [
     StationModel(stationName: "Stasiun Tanah Abang", address: "Stasiun Tanahabang, Jalan Jati Baru Raya, Jl. Cideng Timur, Kp. Bali, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10250, Indonesia", latitude: -6.1857021, longitude: 106.8108536),
     StationModel(stationName: "Stasiun Palmerah", address: "Palmerah, RT.1/RW.3, Gelora, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10270, Indonesia", latitude: -6.2072958, longitude: 106.7975158),
     StationModel( stationName: "Stasiun Kebayoran", address: "Kebayoran, Jl. Mesjid Al Huda No.12, Kby. Lama Utara, Kec. Kby. Lama, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12220, Indonesia", latitude: -6.2372475, longitude: 106.7825225),
