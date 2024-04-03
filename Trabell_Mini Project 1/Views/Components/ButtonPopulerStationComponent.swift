@@ -17,9 +17,7 @@ struct ButtonPopulerStationComponent: View {
             Button(buttonTitle) {
                 if buttonTitle == "Tanah Abang" || buttonTitle == "Rawa Buntu" {
                                 callback()                             }
-                //            Button(stationModel.stationName){
-                //                callback(stationModel)
-                //            }
+                
             } 
             .buttonStyle(.borderedProminent)
             .tint(Color(hex: "6F9D80"))

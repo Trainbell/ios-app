@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RoutineSheetView: View {
+    @State var routineStation: StationModel? = nil
+    
     var body: some View {
         ScrollView{
             VStack {
@@ -22,6 +24,25 @@ struct RoutineSheetView: View {
                 Spacer()
                 
                 Divider()
+                
+                VStack{
+                    
+                     ForEach(stationModels.filter { $0.isRoutine }) { station in
+                         VStack{
+                             Button(action: {
+                                 routineStation = station
+                                 
+                                 
+                             }){
+                                 RoutineComponent(station: station)
+                             }
+                             Divider()
+                                 .padding(.vertical, 12)
+
+                         }
+                               }
+                        
+                }
             
                 
             }
