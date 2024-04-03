@@ -15,6 +15,8 @@
 		63C1FF0A2BB9470C007F6FCA /* Trabell_Mini_Project_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FF092BB9470C007F6FCA /* Trabell_Mini_Project_1Tests.swift */; };
 		63C1FF142BB9470C007F6FCA /* Trabell_Mini_Project_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FF132BB9470C007F6FCA /* Trabell_Mini_Project_1UITests.swift */; };
 		63C1FF162BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1FF152BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift */; };
+		63EB33C12BBD066F009FAC40 /* RoutineSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EB33C02BBD066F009FAC40 /* RoutineSheetView.swift */; };
+		63EB33C32BBD083B009FAC40 /* RoutineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EB33C22BBD083B009FAC40 /* RoutineModel.swift */; };
 		958137B62BBCE4A800F71B37 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958137B52BBCE4A800F71B37 /* HomeView.swift */; };
 		FB4CC8632BBA6B28003D2D4C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FB4CC8622BBA6B28003D2D4C /* .gitignore */; };
 		FBE54B272BBBBD3F000724B0 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B262BBBBD3F000724B0 /* Color.swift */; };
@@ -60,6 +62,8 @@
 		63C1FF0F2BB9470C007F6FCA /* Trabell_Mini Project 1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trabell_Mini Project 1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C1FF132BB9470C007F6FCA /* Trabell_Mini_Project_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trabell_Mini_Project_1UITests.swift; sourceTree = "<group>"; };
 		63C1FF152BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trabell_Mini_Project_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		63EB33C02BBD066F009FAC40 /* RoutineSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineSheetView.swift; sourceTree = "<group>"; };
+		63EB33C22BBD083B009FAC40 /* RoutineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModel.swift; sourceTree = "<group>"; };
 		958137B52BBCE4A800F71B37 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FB4CC8622BBA6B28003D2D4C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FBE54B262BBBBD3F000724B0 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 				FBE54B302BBBBF2C000724B0 /* Components */,
 				63C1FEF82BB9470B007F6FCA /* SplashView.swift */,
 				63443C792BBAB441003B2EDF /* SearchSheetView.swift */,
+				63EB33C02BBD066F009FAC40 /* RoutineSheetView.swift */,
 				FBE54B282BBBBDDD000724B0 /* ReminderSheetView.swift */,
 				FBE54B3C2BBBD650000724B0 /* MainView.swift */,
 				958137B52BBCE4A800F71B37 /* HomeView.swift */,
@@ -191,6 +196,7 @@
 				FBE54B2E2BBBBE6D000724B0 /* StationModel.swift */,
 				FBE54B382BBBC92E000724B0 /* ReminderModel.swift */,
 				FBE54B3A2BBBD06A000724B0 /* DataStation.swift */,
+				63EB33C22BBD083B009FAC40 /* RoutineModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -349,12 +355,14 @@
 				63C1FEF92BB9470B007F6FCA /* SplashView.swift in Sources */,
 				FBE54B3F2BBC38AD000724B0 /* StationUtils.swift in Sources */,
 				FBE54B322BBBBF4D000724B0 /* StepperComponents.swift in Sources */,
+				63EB33C32BBD083B009FAC40 /* RoutineModel.swift in Sources */,
 				63C1FEF72BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift in Sources */,
 				FBE54B272BBBBD3F000724B0 /* Color.swift in Sources */,
 				FBE54B432BBC7891000724B0 /* ButtonPopulerStationComponent.swift in Sources */,
 				FBE54B412BBC77FA000724B0 /* SearchItemComponent.swift in Sources */,
 				FBE54B372BBBC40D000724B0 /* LocationUtils.swift in Sources */,
 				FBE54B392BBBC92E000724B0 /* ReminderModel.swift in Sources */,
+				63EB33C12BBD066F009FAC40 /* RoutineSheetView.swift in Sources */,
 				63443C7A2BBAB441003B2EDF /* SearchSheetView.swift in Sources */,
 				FBE54B2F2BBBBE6D000724B0 /* StationModel.swift in Sources */,
 			);

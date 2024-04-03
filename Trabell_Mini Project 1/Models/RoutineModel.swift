@@ -1,21 +1,19 @@
 //
-//  StationTimelineModel.swift
+//  RoutineModel.swift
 //  Trabell_Mini Project 1
 //
-//  Created by Rifat Khadafy on 02/04/24.
+//  Created by Lucinda Artahni on 03/04/24.
 //
 
 import Foundation
 
-struct StationModel: Hashable, Identifiable, Equatable {
-    internal init( stationName: String, address: String, latitude: Double, longitude: Double, isRoutine: Bool = false) {
+struct RoutineModel: Hashable, Identifiable, Equatable {
+    internal init( stationName: String, address: String, latitude: Double, longitude: Double) {
         self.id = UUID().uuidString
         self.stationName = stationName
         self.address = address
         self.latitude = latitude
         self.longitude = longitude
-        self.isRoutine = isRoutine
-        
     }
     
     let id: String
@@ -23,6 +21,4 @@ struct StationModel: Hashable, Identifiable, Equatable {
     let address: String
     let latitude: Double
     let longitude: Double
-    var isRoutine: Bool
-    
 }

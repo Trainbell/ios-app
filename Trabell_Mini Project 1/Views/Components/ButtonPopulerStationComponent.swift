@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct ButtonPopulerStationComponent: View {
+    //var stationModel: StationModel
     var buttonTitle: String
+    let callback: () -> Void
     
     var body: some View{
         HStack {
-            Button(buttonTitle){
-                //action
-            }
+            Button(buttonTitle) {
+                if buttonTitle == "Tanah Abang" || buttonTitle == "Rawa Buntu" {
+                                callback()                             }
+                //            Button(stationModel.stationName){
+                //                callback(stationModel)
+                //            }
+            } 
             .buttonStyle(.borderedProminent)
             .tint(Color(hex: "6F9D80"))
             .buttonBorderShape(.roundedRectangle(radius: 16))
@@ -26,6 +32,6 @@ struct ButtonPopulerStationComponent: View {
         }
     }}
 
-#Preview {
-    ButtonPopulerStationComponent(buttonTitle: "")
-}
+//#Preview {
+//    ButtonPopulerStationComponent(buttonTitle: "")
+//}

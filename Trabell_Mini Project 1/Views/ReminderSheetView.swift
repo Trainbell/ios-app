@@ -13,19 +13,36 @@ struct ReminderSheetView: View {
     @ObservedObject var locationUtil = LocationUtils()
     @Binding var isPresented: Bool
     @State var listStation: [StationModel] = []
+    @State var isRoutine = false
     @State var currentStation = StationUtils.getNearestStation(latitude: -6.314835075294274, longitude: 106.67623201918188)
+    //var onBookmark: (StationModel) -> Void
     
     var body: some View {
         VStack {
             HStack {
-                Text("Rawa Buntu Station")
+                Text(destinationStation?.stationName ?? "")
                     .font(.system(size: 24))
                     .bold()
                 Spacer()
-                Image(systemName: "bookmark")
-                    .font(.system(size: 22))
-                    .padding(.trailing, 0.2069)
-                    .foregroundColor(Color(hex: "0x44443D"))
+                Button(action: {
+                    if let index = stationModels.firstIndex(where: { $0.stationName == destinationStation!.stationName }) {
+                        stationModels[index].isRoutine.toggle()
+                        }
+                    isRoutine.toggle()
+                    
+                }){
+                    if(self.isRoutine == true){
+                        Image(systemName: "bookmark.fill")
+                            .font(.system(size: 22))
+                            .padding(.trailing, 0.2069)
+                            .foregroundColor(Color(hex: "6F9D80"))
+                    } else {
+                        Image(systemName: "bookmark")
+                            .font(.system(size: 22))
+                            .padding(.trailing, 0.2069)
+                            .foregroundColor(Color(hex: "0x44443D"))
+                    }
+                }
                 
                 Button(action: {
                     self.isPresented = false
@@ -76,6 +93,7 @@ struct ReminderSheetView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(Color(hex: "0xF8EBDD"))
         .onAppear {
+            self.isRoutine = self.destinationStation?.isRoutine ?? false
             self.locationUtil.requestLocation()
         }
         .onChange(of: locationUtil.userLocation){ _, location in
