@@ -70,7 +70,7 @@ struct ReminderSheetView: View {
                             getListIndicator(listStation: listStation)
                         )
                         .lineOptions(StepperLineOptions.rounded(4, 8, Color(hex:"0xF6F9D80")))
-                        .stepLifeCycles((listStation).map { _ in StepLifeCycle.completed })
+                        .stepLifeCycles((listStation).map { _ in StepLifeCycle.pending })
                         .spacing(40)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 50)
@@ -111,7 +111,7 @@ struct ReminderSheetView: View {
     
     func getListIndicator(listStation: [StationModel] ) -> [StepperIndicationType<IndicatorImageView>] {
         return listStation.map { station in
-            if(listStation.first == station){
+            if(listStation.last == station){
                 return StepperIndicationType.custom(IndicatorImageView(indicator: .pin))
             }
             if (station == currentStation){

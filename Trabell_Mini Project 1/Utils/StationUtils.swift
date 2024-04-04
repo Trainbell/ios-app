@@ -21,9 +21,9 @@ class StationUtils {
         let result = stationModels[startIndex...endIndex]
         
         if currentIndex > destinationIndex {
-            return Array(result)
-        } else {
             return Array(result.reversed())
+        } else {
+            return Array(result)
         }
     }
     
