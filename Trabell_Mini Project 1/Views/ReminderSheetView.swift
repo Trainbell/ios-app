@@ -5,18 +5,21 @@
 //  Created by Rifat Khadafy on 02/04/24.
 //
 
-import SwiftUI
 import StepperView
+import SwiftUI
+import Combine
+import UserNotifications
 
 struct ReminderSheetView: View {
+    @State private var isAlarmSet = false
     @Binding var destinationStation: StationModel?
     @ObservedObject var locationUtil = LocationUtils()
     @Binding var isPresented: Bool
     @State var listStation: [StationModel] = []
     @State var isRoutine = false
     @State var currentStation = StationUtils.getNearestStation(latitude: -6.314835075294274, longitude: 106.67623201918188)
-    //var onBookmark: (StationModel) -> Void
-    
+    // var onBookmark: (StationModel) -> Void
+
     var body: some View {
         VStack {
             HStack {
@@ -27,12 +30,11 @@ struct ReminderSheetView: View {
                 Button(action: {
                     if let index = stationModels.firstIndex(where: { $0.stationName == destinationStation!.stationName }) {
                         stationModels[index].isRoutine.toggle()
-                        }
+                    }
                     isRoutine.toggle()
-                    
-                    
-                }){
-                    if(self.isRoutine == true){
+
+                }) {
+                    if self.isRoutine == true {
                         Image(systemName: "bookmark.fill")
                             .font(.system(size: 22))
                             .padding(.trailing, 0.2069)
@@ -44,43 +46,41 @@ struct ReminderSheetView: View {
                             .foregroundColor(Color(hex: "0x44443D"))
                     }
                 }
-                
+
                 Button(action: {
                     self.isPresented = false
-                }){
+                }) {
                     Image(systemName: "xmark.circle.fill")
                         .font(.system(size: 22))
                         .foregroundColor(Color(hex: "0x44443D"))
-                    
                 }
             }
             .padding(.horizontal, 20)
             .padding(.top, 40)
-            
+
             Divider()
-            
-            if (!self.listStation.isEmpty){
+
+            if !self.listStation.isEmpty {
                 ScrollView(.vertical, showsIndicators: false) {
                     StepperView()
                         .addSteps(
                             getListStep(listStation: listStation)
                         )
-                        .alignments((stationModels).map { _ in .bottom })
+                        .alignments(stationModels.map { _ in .bottom })
                         .indicators(
                             getListIndicator(listStation: listStation)
                         )
-                        .lineOptions(StepperLineOptions.rounded(4, 8, Color(hex:"0xF6F9D80")))
-                        .stepLifeCycles((listStation).map { _ in StepLifeCycle.pending })
+                        .lineOptions(StepperLineOptions.rounded(4, 8, Color(hex: "0xF6F9D80")))
+                        .stepLifeCycles(listStation.map { _ in StepLifeCycle.pending })
                         .spacing(40)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 50)
                 }
-                
             }
             Button(
                 action: {
-                    
-                }, label:  {
+                    setAlarm()
+                }, label: {
                     Text("Set Reminder")
                         .frame(maxWidth: .infinity)
                 }
@@ -89,16 +89,17 @@ struct ReminderSheetView: View {
             .padding(.horizontal, 20)
             .padding(.top, 20)
             .buttonStyle(.borderedProminent)
-            .controlSize(.extraLarge)
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden()
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(Color(hex: "0xF8EBDD"))
         .onAppear {
             self.isRoutine = self.destinationStation?.isRoutine ?? false
             self.locationUtil.requestLocation()
         }
-        .onChange(of: locationUtil.userLocation){ _, location in
-            print("change")
+        .onReceive(Just(locationUtil.userLocation)){ location in
+            print("is Called")
             guard let location = location else {
                 return
             }
@@ -108,23 +109,47 @@ struct ReminderSheetView: View {
             }
         }
     }
-    
-    func getListIndicator(listStation: [StationModel] ) -> [StepperIndicationType<IndicatorImageView>] {
+
+    func getListIndicator(listStation: [StationModel]) -> [StepperIndicationType<IndicatorImageView>] {
         return listStation.map { station in
-            if(listStation.last == station){
+            if listStation.last == station {
                 return StepperIndicationType.custom(IndicatorImageView(indicator: .pin))
             }
-            if (station == currentStation){
+            if station == currentStation {
                 return StepperIndicationType.custom(IndicatorImageView(indicator: .train))
             }
             return StepperIndicationType.custom(IndicatorImageView(indicator: .none))
         }
     }
-    
+
     func getListStep(listStation: [StationModel]) -> [CustomStepTextView] {
         return listStation.map { station in
-            CustomStepTextView(text: station.stationName, desc: station.address )
+            CustomStepTextView(text: station.stationName, desc: station.address)
+        }
+    }
+
+    func setAlarm() {
+        let center = UNUserNotificationCenter.current()
+
+        // Request authorization to display notifications
+        center.requestAuthorization(options: [.alert, .sound, .criticalAlert]) { granted, error in
+            if let error = error {
+                print("Error requesting authorization: \(error.localizedDescription)")
+            }
+
+            if granted {
+                // Create a trigger for the notification to fire immediately
+                let content = UNMutableNotificationContent()
+                content.title = "Alarm"
+                content.body = "This is your alarm."
+                content.sound = UNNotificationSound.defaultCritical
+
+                for i in 1 ... 64 {
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(i + 5), repeats: false)
+                    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+                    center.add(request)
+                }
+            }
         }
     }
 }
-

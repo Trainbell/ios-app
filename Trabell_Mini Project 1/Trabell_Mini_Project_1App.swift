@@ -10,6 +10,7 @@ import SwiftData
 
 @main
 struct Trabell_Mini_Project_1App: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
         WindowGroup {
