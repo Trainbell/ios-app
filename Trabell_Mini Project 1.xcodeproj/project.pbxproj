@@ -21,6 +21,9 @@
 		958137BA2BBCEFE000F71B37 /* HomeCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958137B92BBCEFE000F71B37 /* HomeCardComponent.swift */; };
 		FB2CEA182BCD2BE500D72DE7 /* CornerRadiusModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2CEA172BCD2BE500D72DE7 /* CornerRadiusModifier.swift */; };
 		FB4CC8632BBA6B28003D2D4C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FB4CC8622BBA6B28003D2D4C /* .gitignore */; };
+		FB7977E42BCD9723004BFF92 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FB7977E32BCD9723004BFF92 /* SDWebImageSwiftUI */; };
+		FB7977E62BCD9784004BFF92 /* trainactive.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB7977E52BCD9784004BFF92 /* trainactive.gif */; };
+		FB7977E82BCD9848004BFF92 /* HomeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7977E72BCD9848004BFF92 /* HomeBackground.swift */; };
 		FBE54B272BBBBD3F000724B0 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B262BBBBD3F000724B0 /* Color.swift */; };
 		FBE54B292BBBBDDD000724B0 /* ReminderSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B282BBBBDDD000724B0 /* ReminderSheetView.swift */; };
 		FBE54B2C2BBBBDED000724B0 /* StepperView in Frameworks */ = {isa = PBXBuildFile; productRef = FBE54B2B2BBBBDED000724B0 /* StepperView */; };
@@ -71,6 +74,8 @@
 		FB2CEA172BCD2BE500D72DE7 /* CornerRadiusModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusModifier.swift; sourceTree = "<group>"; };
 		FB4CC8622BBA6B28003D2D4C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FB674C942BC1CB2300F83310 /* TanahabangToRawabuntu.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TanahabangToRawabuntu.gpx; sourceTree = "<group>"; };
+		FB7977E52BCD9784004BFF92 /* trainactive.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = trainactive.gif; sourceTree = "<group>"; };
+		FB7977E72BCD9848004BFF92 /* HomeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBackground.swift; sourceTree = "<group>"; };
 		FBE54B262BBBBD3F000724B0 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FBE54B282BBBBDDD000724B0 /* ReminderSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSheetView.swift; sourceTree = "<group>"; };
 		FBE54B2E2BBBBE6D000724B0 /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
@@ -90,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB7977E42BCD9723004BFF92 /* SDWebImageSwiftUI in Frameworks */,
 				FBE54B2C2BBBBDED000724B0 /* StepperView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +142,7 @@
 		63C1FEF52BB9470B007F6FCA /* Trabell_Mini Project 1 */ = {
 			isa = PBXGroup;
 			children = (
+				FB7977E52BCD9784004BFF92 /* trainactive.gif */,
 				FBE54B442BBC87F2000724B0 /* Trabell-Mini-Project-1-Info.plist */,
 				FBE54B2D2BBBBE55000724B0 /* Models */,
 				FBE54B252BBBBD27000724B0 /* Utils */,
@@ -215,6 +222,7 @@
 				63EB33C42BBD11CB009FAC40 /* RoutineComponent.swift */,
 				FBE54B422BBC7891000724B0 /* ButtonPopulerStationComponent.swift */,
 				958137B92BBCEFE000F71B37 /* HomeCardComponent.swift */,
+				FB7977E72BCD9848004BFF92 /* HomeBackground.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -237,6 +245,7 @@
 			name = "Trabell_Mini Project 1";
 			packageProductDependencies = (
 				FBE54B2B2BBBBDED000724B0 /* StepperView */,
+				FB7977E32BCD9723004BFF92 /* SDWebImageSwiftUI */,
 			);
 			productName = "Trabell_Mini Project 1";
 			productReference = 63C1FEF32BB9470B007F6FCA /* Trabell_Mini Project 1.app */;
@@ -312,6 +321,7 @@
 			mainGroup = 63C1FEEA2BB9470B007F6FCA;
 			packageReferences = (
 				FBE54B2A2BBBBDED000724B0 /* XCRemoteSwiftPackageReference "StepperView" */,
+				FB7977E22BCD9723004BFF92 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 63C1FEF42BB9470B007F6FCA /* Products */;
 			projectDirPath = "";
@@ -330,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C1FF002BB9470C007F6FCA /* Preview Assets.xcassets in Resources */,
+				FB7977E62BCD9784004BFF92 /* trainactive.gif in Resources */,
 				FB4CC8632BBA6B28003D2D4C /* .gitignore in Resources */,
 				63C1FEFD2BB9470C007F6FCA /* Assets.xcassets in Resources */,
 			);
@@ -368,6 +379,7 @@
 				63C1FEF72BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift in Sources */,
 				958137BA2BBCEFE000F71B37 /* HomeCardComponent.swift in Sources */,
 				FBE54B272BBBBD3F000724B0 /* Color.swift in Sources */,
+				FB7977E82BCD9848004BFF92 /* HomeBackground.swift in Sources */,
 				FBE54B432BBC7891000724B0 /* ButtonPopulerStationComponent.swift in Sources */,
 				FBE54B412BBC77FA000724B0 /* SearchItemComponent.swift in Sources */,
 				FBE54B372BBBC40D000724B0 /* LocationUtils.swift in Sources */,
@@ -542,9 +554,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Trabell-Mini-Project-1-Info.plist";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to provide you with relevant information.";
-				INFOPLIST_KEY_NSLocationUsageDescription = Location;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Location;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -575,9 +584,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Trabell-Mini-Project-1-Info.plist";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to provide you with relevant information.";
-				INFOPLIST_KEY_NSLocationUsageDescription = Location;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Location;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -710,6 +716,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FB7977E22BCD9723004BFF92 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
 		FBE54B2A2BBBBDED000724B0 /* XCRemoteSwiftPackageReference "StepperView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/badrinathvm/StepperView.git";
@@ -721,6 +735,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FB7977E32BCD9723004BFF92 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB7977E22BCD9723004BFF92 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
 		FBE54B2B2BBBBDED000724B0 /* StepperView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FBE54B2A2BBBBDED000724B0 /* XCRemoteSwiftPackageReference "StepperView" */;

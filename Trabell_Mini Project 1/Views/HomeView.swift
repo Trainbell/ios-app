@@ -12,6 +12,7 @@ import UserNotifications
 struct HomeView: View {
     @State var showSheet = false
     @State var showRoutine = false
+    @State var active = true
     private let eventStore = EKEventStore()
 
     var body: some View {
@@ -19,34 +20,9 @@ struct HomeView: View {
         ZStack {
             VStack {
                 HStack {
-                    Image("HomeBG - 1")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .overlay(alignment: .trailing) {
-                            VStack {
-                                Text("Make\nYour Own\nReminder")
-                                    .bold()
-                                    .font(.system(size: 24))
-                                    .foregroundStyle(Color(red: 0.266, green: 0.266, blue: 0.24))
-
-                                ZStack {
-                                    Button {
-                                        showSheet.toggle()
-                                    }
-                                    label: {
-                                        ZStack {
-                                            RoundedRectangle(cornerRadius: 27)
-                                                .fill(Color(red: 0.984, green: 0.729, blue: 0.286))
-                                                .frame(width: 112, height: 34)
-                                            Text("Start")
-                                                .foregroundStyle(.black)
-                                                .bold()
-                                        }
-                                    }
-                                }
-
-                            }.padding(.trailing, 24)
-                        }
+                    HomeBackground(active: $active) {
+                        showSheet.toggle()
+                    }
                 }.overlay(alignment: .bottom) {
                     ZStack {
                         UnevenRoundedRectangle(
