@@ -10,20 +10,24 @@ import StepperView
 
 struct CustomStepTextView: View {
     var text : String
-    var desc: String
+    var distance: Int
     var body: some View {
         VStack {
             Text(text)
                 .font(.system(size: 16))
                 .fontWeight(.bold)
-                .foregroundColor(Color(hex: "0xF44443D"))
+                .foregroundColor(Color("ColorText"))
                 .frame(maxWidth: .infinity, alignment: .leading)
-            Text(desc)
-                .font(.system(size: 12))
-                .foregroundColor(Color(hex: "0xF#44443D"))
-                .lineLimit(1)
-                .truncationMode(.tail)
-                .frame(maxWidth: .infinity, alignment: .leading)
+            if(distance > 10) {
+                Text("\(distance.description) meters away")
+                    .font(.system(size: 14))
+                    .foregroundColor(Color("ColorText"))
+                    .lineLimit(1)
+                    .padding(.top, 2)
+                    .truncationMode(.tail)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
+            }
         }
     }
 }
@@ -62,5 +66,5 @@ struct IndicatorImageView: View {
 }
 
 #Preview {
-    IndicatorImageView(indicator: .none )
+    CustomStepTextView(text: "Sudirman", distance: 0)
 }

@@ -64,8 +64,7 @@ struct RoutineSheetView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(Color(hex: "0xF8EBDD"))
         .sheet(isPresented: $showSheet) {
-            ReminderSheetView(destinationStation: $routineStation, isPresented: $showSheet)
-//                .presentationCornerRadius(48)
+//            ReminderSheetView(destinationStation: routineStation!)
         }
         .sheet(isPresented: $showSearchSheet) {
             SearchSheetView()

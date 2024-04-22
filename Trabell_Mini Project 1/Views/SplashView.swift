@@ -10,7 +10,6 @@ import SwiftUI
 
 struct SplashScreenView: View {
     @State private var isActive: Bool = false
-    @ObservedObject var locationUtils = LocationUtils()
 
     var body: some View {
         VStack {

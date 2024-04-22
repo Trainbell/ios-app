@@ -5,7 +5,6 @@
 //  Created by Vincent Junior Halim on 27/03/24.
 //
 
-import EventKit
 import SwiftUI
 import UserNotifications
 
@@ -13,14 +12,13 @@ struct HomeView: View {
     @State var showSheet = false
     @State var showRoutine = false
     @State var active = true
-    private let eventStore = EKEventStore()
 
     var body: some View {
         let background_color = Color(red: 0.976, green: 0.925, blue: 0.87)
         ZStack {
             VStack {
                 HStack {
-                    HomeBackground(active: $active) {
+                    HomeBackground(){
                         showSheet.toggle()
                     }
                 }.overlay(alignment: .bottom) {
@@ -98,7 +96,7 @@ struct HomeView: View {
                             .padding(.bottom)
                     }
                     .frame(maxWidth: .infinity)
-                    .background(Color(white: 1, opacity: 0.5))
+                    .background(Color("ColorWhiteBG"))
                     .cornerRadius(27)
 
                 }.padding()
@@ -149,3 +147,4 @@ struct HomeView: View {
 #Preview {
     HomeView()
 }
+

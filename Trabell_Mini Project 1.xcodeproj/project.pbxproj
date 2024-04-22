@@ -20,15 +20,33 @@
 		958137B62BBCE4A800F71B37 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958137B52BBCE4A800F71B37 /* HomeView.swift */; };
 		958137BA2BBCEFE000F71B37 /* HomeCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958137B92BBCEFE000F71B37 /* HomeCardComponent.swift */; };
 		FB2CEA182BCD2BE500D72DE7 /* CornerRadiusModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2CEA172BCD2BE500D72DE7 /* CornerRadiusModifier.swift */; };
+		FB405A9B2BD0228100C85744 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB405A9A2BD0228100C85744 /* AppViewModel.swift */; };
+		FB405A9D2BD031CD00C85744 /* ReminderSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB405A9C2BD031CD00C85744 /* ReminderSheetViewModel.swift */; };
 		FB4CC8632BBA6B28003D2D4C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FB4CC8622BBA6B28003D2D4C /* .gitignore */; };
 		FB7977E42BCD9723004BFF92 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FB7977E32BCD9723004BFF92 /* SDWebImageSwiftUI */; };
 		FB7977E62BCD9784004BFF92 /* trainactive.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB7977E52BCD9784004BFF92 /* trainactive.gif */; };
 		FB7977E82BCD9848004BFF92 /* HomeBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7977E72BCD9848004BFF92 /* HomeBackground.swift */; };
+		FBC2B2462BD6A730007DEC81 /* K2D-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B2382BD6A72F007DEC81 /* K2D-Italic.ttf */; };
+		FBC2B2472BD6A730007DEC81 /* K2D-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B2392BD6A72F007DEC81 /* K2D-Light.ttf */; };
+		FBC2B2482BD6A730007DEC81 /* K2D-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B23A2BD6A72F007DEC81 /* K2D-LightItalic.ttf */; };
+		FBC2B2492BD6A730007DEC81 /* K2D-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B23B2BD6A72F007DEC81 /* K2D-SemiBold.ttf */; };
+		FBC2B24A2BD6A730007DEC81 /* K2D-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B23C2BD6A730007DEC81 /* K2D-ExtraLight.ttf */; };
+		FBC2B24B2BD6A730007DEC81 /* K2D-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B23D2BD6A730007DEC81 /* K2D-ExtraBold.ttf */; };
+		FBC2B24C2BD6A730007DEC81 /* K2D-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B23E2BD6A730007DEC81 /* K2D-ExtraLightItalic.ttf */; };
+		FBC2B24D2BD6A730007DEC81 /* K2D-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B23F2BD6A730007DEC81 /* K2D-Regular.ttf */; };
+		FBC2B24E2BD6A730007DEC81 /* K2D-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B2402BD6A730007DEC81 /* K2D-Medium.ttf */; };
+		FBC2B24F2BD6A730007DEC81 /* K2D-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B2412BD6A730007DEC81 /* K2D-SemiBoldItalic.ttf */; };
+		FBC2B2502BD6A730007DEC81 /* K2D-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B2422BD6A730007DEC81 /* K2D-BoldItalic.ttf */; };
+		FBC2B2512BD6A730007DEC81 /* K2D-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B2432BD6A730007DEC81 /* K2D-Thin.ttf */; };
+		FBC2B2522BD6A730007DEC81 /* K2D-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B2442BD6A730007DEC81 /* K2D-ExtraBoldItalic.ttf */; };
+		FBC2B2532BD6A730007DEC81 /* K2D-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B2452BD6A730007DEC81 /* K2D-MediumItalic.ttf */; };
+		FBC2B2552BD6A813007DEC81 /* K2D-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B2542BD6A734007DEC81 /* K2D-ThinItalic.ttf */; };
+		FBC2B2562BD6A813007DEC81 /* K2D-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBC2B2362BD6A6E6007DEC81 /* K2D-Bold.ttf */; };
 		FBE54B272BBBBD3F000724B0 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B262BBBBD3F000724B0 /* Color.swift */; };
 		FBE54B292BBBBDDD000724B0 /* ReminderSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B282BBBBDDD000724B0 /* ReminderSheetView.swift */; };
 		FBE54B2C2BBBBDED000724B0 /* StepperView in Frameworks */ = {isa = PBXBuildFile; productRef = FBE54B2B2BBBBDED000724B0 /* StepperView */; };
 		FBE54B2F2BBBBE6D000724B0 /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B2E2BBBBE6D000724B0 /* StationModel.swift */; };
-		FBE54B322BBBBF4D000724B0 /* StepperComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B312BBBBF4D000724B0 /* StepperComponents.swift */; };
+		FBE54B322BBBBF4D000724B0 /* StationStepperComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B312BBBBF4D000724B0 /* StationStepperComponents.swift */; };
 		FBE54B372BBBC40D000724B0 /* LocationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B362BBBC40D000724B0 /* LocationUtils.swift */; };
 		FBE54B392BBBC92E000724B0 /* ReminderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B382BBBC92E000724B0 /* ReminderModel.swift */; };
 		FBE54B3B2BBBD06A000724B0 /* DataStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54B3A2BBBD06A000724B0 /* DataStation.swift */; };
@@ -72,14 +90,32 @@
 		958137B52BBCE4A800F71B37 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		958137B92BBCEFE000F71B37 /* HomeCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardComponent.swift; sourceTree = "<group>"; };
 		FB2CEA172BCD2BE500D72DE7 /* CornerRadiusModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusModifier.swift; sourceTree = "<group>"; };
+		FB405A9A2BD0228100C85744 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		FB405A9C2BD031CD00C85744 /* ReminderSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSheetViewModel.swift; sourceTree = "<group>"; };
 		FB4CC8622BBA6B28003D2D4C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FB674C942BC1CB2300F83310 /* TanahabangToRawabuntu.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TanahabangToRawabuntu.gpx; sourceTree = "<group>"; };
 		FB7977E52BCD9784004BFF92 /* trainactive.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = trainactive.gif; sourceTree = "<group>"; };
 		FB7977E72BCD9848004BFF92 /* HomeBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBackground.swift; sourceTree = "<group>"; };
+		FBC2B2362BD6A6E6007DEC81 /* K2D-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-Bold.ttf"; sourceTree = "<group>"; };
+		FBC2B2382BD6A72F007DEC81 /* K2D-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-Italic.ttf"; sourceTree = "<group>"; };
+		FBC2B2392BD6A72F007DEC81 /* K2D-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-Light.ttf"; sourceTree = "<group>"; };
+		FBC2B23A2BD6A72F007DEC81 /* K2D-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-LightItalic.ttf"; sourceTree = "<group>"; };
+		FBC2B23B2BD6A72F007DEC81 /* K2D-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-SemiBold.ttf"; sourceTree = "<group>"; };
+		FBC2B23C2BD6A730007DEC81 /* K2D-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FBC2B23D2BD6A730007DEC81 /* K2D-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-ExtraBold.ttf"; sourceTree = "<group>"; };
+		FBC2B23E2BD6A730007DEC81 /* K2D-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		FBC2B23F2BD6A730007DEC81 /* K2D-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-Regular.ttf"; sourceTree = "<group>"; };
+		FBC2B2402BD6A730007DEC81 /* K2D-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-Medium.ttf"; sourceTree = "<group>"; };
+		FBC2B2412BD6A730007DEC81 /* K2D-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		FBC2B2422BD6A730007DEC81 /* K2D-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-BoldItalic.ttf"; sourceTree = "<group>"; };
+		FBC2B2432BD6A730007DEC81 /* K2D-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-Thin.ttf"; sourceTree = "<group>"; };
+		FBC2B2442BD6A730007DEC81 /* K2D-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		FBC2B2452BD6A730007DEC81 /* K2D-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-MediumItalic.ttf"; sourceTree = "<group>"; };
+		FBC2B2542BD6A734007DEC81 /* K2D-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "K2D-ThinItalic.ttf"; sourceTree = "<group>"; };
 		FBE54B262BBBBD3F000724B0 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FBE54B282BBBBDDD000724B0 /* ReminderSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSheetView.swift; sourceTree = "<group>"; };
 		FBE54B2E2BBBBE6D000724B0 /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
-		FBE54B312BBBBF4D000724B0 /* StepperComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperComponents.swift; sourceTree = "<group>"; };
+		FBE54B312BBBBF4D000724B0 /* StationStepperComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationStepperComponents.swift; sourceTree = "<group>"; };
 		FBE54B362BBBC40D000724B0 /* LocationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUtils.swift; sourceTree = "<group>"; };
 		FBE54B382BBBC92E000724B0 /* ReminderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderModel.swift; sourceTree = "<group>"; };
 		FBE54B3A2BBBD06A000724B0 /* DataStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStation.swift; sourceTree = "<group>"; };
@@ -142,9 +178,10 @@
 		63C1FEF52BB9470B007F6FCA /* Trabell_Mini Project 1 */ = {
 			isa = PBXGroup;
 			children = (
-				FB7977E52BCD9784004BFF92 /* trainactive.gif */,
+				FBC2B2372BD6A6FE007DEC81 /* Resources */,
 				FBE54B442BBC87F2000724B0 /* Trabell-Mini-Project-1-Info.plist */,
 				FBE54B2D2BBBBE55000724B0 /* Models */,
+				FB405A992BD0225200C85744 /* View Models */,
 				FBE54B252BBBBD27000724B0 /* Utils */,
 				FBE54B242BBBBCF4000724B0 /* Views */,
 				63C1FEF62BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift */,
@@ -178,6 +215,39 @@
 				63C1FF152BB9470C007F6FCA /* Trabell_Mini_Project_1UITestsLaunchTests.swift */,
 			);
 			path = "Trabell_Mini Project 1UITests";
+			sourceTree = "<group>";
+		};
+		FB405A992BD0225200C85744 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB405A9A2BD0228100C85744 /* AppViewModel.swift */,
+				FB405A9C2BD031CD00C85744 /* ReminderSheetViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		FBC2B2372BD6A6FE007DEC81 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FB7977E52BCD9784004BFF92 /* trainactive.gif */,
+				FBC2B2542BD6A734007DEC81 /* K2D-ThinItalic.ttf */,
+				FBC2B2422BD6A730007DEC81 /* K2D-BoldItalic.ttf */,
+				FBC2B23D2BD6A730007DEC81 /* K2D-ExtraBold.ttf */,
+				FBC2B2442BD6A730007DEC81 /* K2D-ExtraBoldItalic.ttf */,
+				FBC2B23C2BD6A730007DEC81 /* K2D-ExtraLight.ttf */,
+				FBC2B23E2BD6A730007DEC81 /* K2D-ExtraLightItalic.ttf */,
+				FBC2B2382BD6A72F007DEC81 /* K2D-Italic.ttf */,
+				FBC2B2392BD6A72F007DEC81 /* K2D-Light.ttf */,
+				FBC2B23A2BD6A72F007DEC81 /* K2D-LightItalic.ttf */,
+				FBC2B2402BD6A730007DEC81 /* K2D-Medium.ttf */,
+				FBC2B2452BD6A730007DEC81 /* K2D-MediumItalic.ttf */,
+				FBC2B23F2BD6A730007DEC81 /* K2D-Regular.ttf */,
+				FBC2B23B2BD6A72F007DEC81 /* K2D-SemiBold.ttf */,
+				FBC2B2412BD6A730007DEC81 /* K2D-SemiBoldItalic.ttf */,
+				FBC2B2432BD6A730007DEC81 /* K2D-Thin.ttf */,
+				FBC2B2362BD6A6E6007DEC81 /* K2D-Bold.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		FBE54B242BBBBCF4000724B0 /* Views */ = {
@@ -217,7 +287,7 @@
 		FBE54B302BBBBF2C000724B0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				FBE54B312BBBBF4D000724B0 /* StepperComponents.swift */,
+				FBE54B312BBBBF4D000724B0 /* StationStepperComponents.swift */,
 				FBE54B402BBC77FA000724B0 /* SearchItemComponent.swift */,
 				63EB33C42BBD11CB009FAC40 /* RoutineComponent.swift */,
 				FBE54B422BBC7891000724B0 /* ButtonPopulerStationComponent.swift */,
@@ -339,10 +409,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBC2B2552BD6A813007DEC81 /* K2D-ThinItalic.ttf in Resources */,
+				FBC2B2562BD6A813007DEC81 /* K2D-Bold.ttf in Resources */,
+				FBC2B24C2BD6A730007DEC81 /* K2D-ExtraLightItalic.ttf in Resources */,
+				FBC2B24D2BD6A730007DEC81 /* K2D-Regular.ttf in Resources */,
+				FBC2B2532BD6A730007DEC81 /* K2D-MediumItalic.ttf in Resources */,
+				FBC2B24A2BD6A730007DEC81 /* K2D-ExtraLight.ttf in Resources */,
+				FBC2B2502BD6A730007DEC81 /* K2D-BoldItalic.ttf in Resources */,
+				FBC2B24F2BD6A730007DEC81 /* K2D-SemiBoldItalic.ttf in Resources */,
 				63C1FF002BB9470C007F6FCA /* Preview Assets.xcassets in Resources */,
 				FB7977E62BCD9784004BFF92 /* trainactive.gif in Resources */,
+				FBC2B2462BD6A730007DEC81 /* K2D-Italic.ttf in Resources */,
+				FBC2B2492BD6A730007DEC81 /* K2D-SemiBold.ttf in Resources */,
+				FBC2B24B2BD6A730007DEC81 /* K2D-ExtraBold.ttf in Resources */,
+				FBC2B2482BD6A730007DEC81 /* K2D-LightItalic.ttf in Resources */,
+				FBC2B2512BD6A730007DEC81 /* K2D-Thin.ttf in Resources */,
 				FB4CC8632BBA6B28003D2D4C /* .gitignore in Resources */,
+				FBC2B24E2BD6A730007DEC81 /* K2D-Medium.ttf in Resources */,
 				63C1FEFD2BB9470C007F6FCA /* Assets.xcassets in Resources */,
+				FBC2B2522BD6A730007DEC81 /* K2D-ExtraBoldItalic.ttf in Resources */,
+				FBC2B2472BD6A730007DEC81 /* K2D-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,13 +455,15 @@
 			files = (
 				FBE54B3B2BBBD06A000724B0 /* DataStation.swift in Sources */,
 				FBF53BDD2BC29B6100CDB2A4 /* AppDelegate.swift in Sources */,
+				FB405A9D2BD031CD00C85744 /* ReminderSheetViewModel.swift in Sources */,
+				FB405A9B2BD0228100C85744 /* AppViewModel.swift in Sources */,
 				FBE54B292BBBBDDD000724B0 /* ReminderSheetView.swift in Sources */,
 				958137B62BBCE4A800F71B37 /* HomeView.swift in Sources */,
 				63C1FEF92BB9470B007F6FCA /* SplashView.swift in Sources */,
 				FB2CEA182BCD2BE500D72DE7 /* CornerRadiusModifier.swift in Sources */,
 				FBE54B3F2BBC38AD000724B0 /* StationUtils.swift in Sources */,
 				63EB33C52BBD11CB009FAC40 /* RoutineComponent.swift in Sources */,
-				FBE54B322BBBBF4D000724B0 /* StepperComponents.swift in Sources */,
+				FBE54B322BBBBF4D000724B0 /* StationStepperComponents.swift in Sources */,
 				63C1FEF72BB9470B007F6FCA /* Trabell_Mini_Project_1App.swift in Sources */,
 				958137BA2BBCEFE000F71B37 /* HomeCardComponent.swift in Sources */,
 				FBE54B272BBBBD3F000724B0 /* Color.swift in Sources */,

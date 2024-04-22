@@ -12,5 +12,4 @@ struct ReminderModel {
     let listStation: Array<StationModel>
     let currentStation: StationModel
     let destinationStation: StationModel
-    
 }

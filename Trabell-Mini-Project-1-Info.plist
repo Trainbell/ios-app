@@ -2,11 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>This app needs access to location always, even when the screen is off.</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>This app needs access to location when open.</string>
-    <key>CFBundleURLTypes</key>
+	<key>UIAppFonts</key>
+	<array>
+		<string>K2D-Ligt.ttf</string>
+		<string>K2D-Regular.ttf</string>
+		<string>K2D-Bold.ttf</string>
+		<string>K2D-SemiBold.ttf</string>
+	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app needs access to location always, even when the screen is off.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app needs access to location when open.</string>
+	<key>CFBundleURLTypes</key>
 	<array>
 		<dict/>
 	</array>

@@ -5,78 +5,90 @@
 //  Created by Rifat Khadafy on 02/04/24.
 //
 
+import Combine
 import CoreLocation
+import Foundation
 
-class LocationUtils: NSObject, CLLocationManagerDelegate, ObservableObject {
-     var locationManager = CLLocationManager()
-    @Published var userLocation: CLLocation?
-    @Published var statusLocation: Bool?
-    
-    
+class LocationUtils: NSObject, CLLocationManagerDelegate {
+    static let shared = LocationUtils()
+    private var locationManager = CLLocationManager()
+    private var isAuthorizationAlways = false
+    private var locationContinuation: CheckedContinuation<CLLocation, Error>?
+    private var locationSubject = PassthroughSubject<CLLocation, Error>()
+
+    private var locationStream: AnyPublisher<CLLocation, Error> {
+        return locationSubject.eraseToAnyPublisher()
+    }
+
     override init() {
         super.init()
-        self.locationManager.delegate = self
+        locationManager.delegate = self
+        isAuthorizationAlways = locationManager.authorizationStatus == .authorizedAlways
+    }
+
+    /*
+      Request one time location
+     */
+    func getLocation() async throws -> CLLocation {
+        return try await withCheckedThrowingContinuation { continuation in
+            self.locationContinuation = continuation
+            requestLocationAlways()
+            self.locationManager.requestLocation()
+        }
+    }
+
+    func getLocationStream() -> AnyPublisher<CLLocation, Error> {
+        requestLocationAlways()
+        locationManager.startUpdatingLocation()
+        return locationStream
     }
     
-    func requestAuthorizationIfNeeded() {
-        switch (locationManager.authorizationStatus) {
+    func closeStream()  {
+        locationManager.stopUpdatingLocation()
+    }
+
+    func requestLocationAlways() {
+        switch locationManager.authorizationStatus {
         case .notDetermined:
             print("Permission is not determined")
-            self.locationManager.requestWhenInUseAuthorization()
+            locationManager.requestWhenInUseAuthorization()
         case .restricted:
             print("Permission is resctricted")
         case .denied:
             print("Permission is denied")
         case .authorizedAlways:
             print("Permission is always")
-            self.statusLocation = true
         case .authorizedWhenInUse:
-            print("Permission is when in use")
-            self.locationManager.requestAlwaysAuthorization()
+            locationManager.requestAlwaysAuthorization()
         @unknown default:
-            print("uknown")
+            print("Default")
         }
     }
-    
-    func requestLocation() {
-        requestAuthorizationIfNeeded()
-        self.locationManager.requestLocation()
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
+    func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        self.userLocation = location
-        print(location)
-//        self.userLocationObserver?(location)
-//        let stasiunUi = CLLocation(
-//            latitude: -6.3607632630938555, longitude: 106.83177617294017
-//        )
-//
-//        
-//    
-//        if(stasiunUi.distance(from: location) <= 50){
-//            self.locationManager.stopUpdatingLocation()
-//            self.statusLocation = true
-//        }
+        locationContinuation?.resume(returning: location)
+        locationContinuation = nil
+        locationSubject.send(location)
     }
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+
+    func locationManager(_: CLLocationManager, didFailWithError error: Error) {
+        locationContinuation?.resume(throwing: error)
+        locationContinuation = nil
+//        locationSubject.send(completion: .failure(error))
+    }
+
+    func locationManager(_: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedAlways {
-            statusLocation = true
+            isAuthorizationAlways = true
         } else if status == .authorizedWhenInUse {
-            requestAuthorizationIfNeeded()
+            requestLocationAlways()
         } else {
-            statusLocation = false
+            isAuthorizationAlways = false
         }
     }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        
-        print("Error: \(error) \(manager.authorizationStatus)")
+
+    func getLocationAuthorization() -> CLAuthorizationStatus {
+        return locationManager.authorizationStatus
     }
-    
-    func getLocationAuthorization() -> CLAuthorizationStatus{
-        return self.locationManager.authorizationStatus
-    }
-    
 }

@@ -27,6 +27,8 @@ class StationUtils {
         }
     }
     
+//    static func getLocationUtils
+    
     static func getNearestStation(latitude: Double, longitude: Double) -> StationModel? {
         let currentLocation = CLLocation(latitude: latitude, longitude: longitude)
         var nearestLocation: StationModel?

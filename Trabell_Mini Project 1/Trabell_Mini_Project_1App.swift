@@ -10,14 +10,14 @@ import SwiftData
 
 @main
 struct Trabell_Mini_Project_1App: App {
+    var appViewModel = AppViewModel()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
         WindowGroup {
-            
             NavigationStack{
                 SplashScreenView()
-            }
+            } .environmentObject(appViewModel)
         }
         
     }

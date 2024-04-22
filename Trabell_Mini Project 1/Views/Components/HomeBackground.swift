@@ -9,37 +9,66 @@ import SDWebImageSwiftUI
 import SwiftUI
 
 struct HomeBackground: View {
-    @Binding var active : Bool
+    @EnvironmentObject var appViewModel: AppViewModel
     let onTap: () -> Void
-    
-    var body: some View {
-        if active {
-            AnimatedImage(name: "trainactive.gif")
-                .overlay(alignment: .trailing) {
-                    VStack {
-                        Text("Arrive in")
-                            .bold()
-                            .font(.system(size: 24))
-                            .foregroundStyle(Color(red: 0.266, green: 0.266, blue: 0.24))
 
-                        ZStack {
-                            Button {
-                                onTap()
-                            }
-                            label: {
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 27)
-                                        .fill(Color(red: 0.984, green: 0.729, blue: 0.286))
-                                        .frame(width: 112, height: 34)
-                                    Text("Details")
-                                        .foregroundStyle(.black)
-                                        .bold()
-                                }
-                            }
+    var body: some View {
+        if appViewModel.reminder != nil {
+            ZStack(alignment: .topLeading) {
+                AnimatedImage(name: "trainactive.gif")
+                VStack() {
+                    VStack(alignment: .leading) {
+                        Text("Destination Station,")
+                            .font(Font.custom("K2D-Regular", size: 16))
+                            .foregroundColor(.colorText)
+                        Text("\(appViewModel.reminder?.destinationStation.stationName ?? "-")")
+                            .font(Font.custom("K2D-Bold", size: 24))
+                            .foregroundColor(.colorText)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 20)
+                    .padding(.leading, 20)
+
+                    VStack(alignment: .trailing){
+                        Text("Arrive in")
+                            .font(Font.custom("K2D-SemiBold", size: 20))
+                            .foregroundColor(.colorText)
+                            .padding(.bottom, 2)
+                            .padding(.top, 1)
+                        
+                        HStack(spacing: 4) {
+                            Image(systemName: "mappin.and.ellipse.circle")
+                                .font(.system(size: 14))
+                                .foregroundColor(.colorText)
+                            
+                            Text("15 km")
+                                .font(Font.custom("K2D-Regular", size: 14))
+                                .foregroundColor(.colorText)
                         }
 
-                    }.padding(.trailing, 24)
+                        Button(action: onTap) {
+                            Text("Details")
+                                .frame(width: 70)
+                              .font(Font.custom("Avenir", size: 16))
+                              .bold()
+                              .foregroundColor(Color(red: 0.27, green: 0.27, blue: 0.24).opacity(0.9))
+                        }
+                        .tint(.white)
+                        .buttonBorderShape(.roundedRectangle(radius: 12))
+                        .controlSize(.small)
+                        .buttonStyle(.borderedProminent)
+                        .padding(.top, 4)
+                        .padding(.trailing, -4)
+                        
+                        
+                    }
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .padding(.trailing, 20)
+            
                 }
+                .frame(maxWidth: .infinity)
+                .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0)
+            }
         } else {
             Image("HomeBG - 1")
                 .resizable()
@@ -47,30 +76,23 @@ struct HomeBackground: View {
                 .overlay(alignment: .trailing) {
                     VStack {
                         Text("Make\nYour Own\nReminder")
-                            .bold()
-                            .font(.system(size: 24))
-                            .foregroundStyle(Color(red: 0.266, green: 0.266, blue: 0.24))
+                            .font(Font.custom("K2D-Bold", size: 24))
+                            .foregroundColor(.colorText)
 
-                        ZStack {
-                            Button {
-                                onTap()
-                            }
-                            label: {
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 27)
-                                        .fill(Color(red: 0.984, green: 0.729, blue: 0.286))
-                                        .frame(width: 112, height: 34)
-                                    Text("Start")
-                                        .foregroundStyle(.black)
-                                        .bold()
-                                }
-                            }
+                        Button(action: onTap) {
+                            Text("Start")
+                                .frame(width: 70)
+                              .font(Font.custom("Avenir", size: 16))
+                              .bold()
+                              .foregroundColor(.black)
                         }
+                        .tint(.colorYellow)
+                        .buttonBorderShape(.roundedRectangle(radius: 12))
+                        .controlSize(.small)
+                        .buttonStyle(.borderedProminent)
 
                     }.padding(.trailing, 24)
                 }
         }
-    
-
     }
 }

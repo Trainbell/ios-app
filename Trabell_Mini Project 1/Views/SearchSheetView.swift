@@ -132,7 +132,6 @@ struct SearchSheetView: View {
                                     Button(action: {
                                         selectedStation = item
                                         
-                                        
                                     }) {
                                         SearchItemComponent(station: item)
                                     }
@@ -149,7 +148,7 @@ struct SearchSheetView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .background(Color("ColorBackground"))
             .background(NavigationLink(
-                destination: ReminderSheetView(destinationStation: $selectedStation, isPresented: $isNavigateToReminder), isActive: $isNavigateToReminder,
+                destination: ReminderSheetView(destinationStation: $selectedStation), isActive: $isNavigateToReminder,
                 label: { EmptyView() }
             ))
         }
